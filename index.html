@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levobit – Soluții și servicii profesionale IT</title>
-  <meta name="description" content="Levobit oferă soluții IT profesionale: sisteme de supraveghere, control acces, infrastructură rețea, suport hardware/software. Partenerul dvs. de încredere în tehnologie.">
+  <title>Levobit – Soluții IT Profesionale & Servicii</title>
+  <meta name="description" content="Levobit oferă soluții IT profesionale, inclusiv sisteme de supraveghere, control acces, infrastructură de rețea, soluții hardware/software și asistență online. Partenerul tău tehnologic de încredere.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -15,18 +15,14 @@
 <header class="header">
   <div class="container">
     <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img">
-        </a>
-      </div>
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="../ro/index.html" class="active">Acasă</a></li>
-        <li><a href="../ro/servicii.html">Servicii</a></li>
-        <li><a href="../ro/retele.html">Rețele LAN</a></li>
-        <li><a href="../ro/clienti.html">Clienți</a></li>
-        <li><a href="../ro/stiri.html">Știri</a></li>
-        <li><a href="../ro/contact.html">Contact</a></li>
+        <li><a href="index.html" class="active">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="retele-lan.html">Rețele LAN</a></li>
+        <li><a href="clienti.html">Clienți</a></li>
+        <li><a href="noutati.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li class="lang-switcher">
           <div class="lang-current" onclick="toggleLangDropdown()">
             <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
@@ -34,58 +30,46 @@
             <span class="lang-caret">▾</span>
           </div>
           <div class="lang-dropdown" id="langDropdown">
-            <a href="../index.html" class="lang-option active">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
-                    <span class="lang-label">Română</span>
-                </span>
-            </a>
-            <a href="../hu/index.html" class="lang-option">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
-                    <span class="lang-label">Magyar</span>
-                </span>
-            </a>
-            <a href="../en/index.html" class="lang-option">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
-                    <span class="lang-label">English</span>
-                </span>
-            </a>
+            <a href="../en/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="index.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
           </div>
         </li>
       </ul>
-      <div class="header-actions">
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Meniu">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </button>
-      </div>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Secțiunea Erou -->
+  <!-- Hero cu slideshow -->
   <section class="hero">
-    <div class="hero-grid"></div>
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('../img/slides/slide1.png');"></div>
+      <div class="slide" style="background-image: url('../img/slides/slide2.jpg');"></div>
+      <div class="slide" style="background-image: url('../img/slides/slide3.jpg');"></div>
+    </div>
+    <div class="slideshow-indicators">
+      <span class="indicator active" data-index="0"></span>
+      <span class="indicator" data-index="1"></span>
+      <span class="indicator" data-index="2"></span>
+    </div>
     <div class="hero-particles">
       <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
       <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
+    <div class="hero-grid"></div>
     <div class="container hero-content">
-      <h1 class="hero-title">Soluții IT <span class="hero-title-gradient">Profesionale</span> pentru Afacerea Dvs.</h1>
+      <h1 class="hero-title">Soluții IT <span class="hero-title-gradient">Profesionale</span> pentru Afacerea Ta</h1>
       <p class="hero-subtitle">Infrastructură IT completă, securitate cibernetică, supraveghere și servicii de automatizare. Încrederea a sute de companii din România.</p>
       <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary">Consultanță gratuită →</a>
-        <a href="servicii.html" class="btn btn-outline">Explorați serviciile</a>
+        <a href="contact.html" class="btn btn-primary">Consultare gratuită →</a>
+        <a href="servicii.html" class="btn btn-outline">Explorează serviciile</a>
       </div>
-      <div class="hero-trust">
-        <div class="hero-trust-label">ÎNCREDEREA LIDERILOR DIN INDUSTRIE</div>
-        <div class="hero-trust-badges">
-          <span class="hero-trust-badge">✓ 1000+ Proiecte</span>
-          <span class="hero-trust-badge">✓ Suport 24/7</span>
-          <span class="hero-trust-badge">✓ Certificat ISO 27001</span>
-        </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-number" data-count="1000">0</div><div class="hero-stat-label">Proiecte livrate</div></div>
+        <div class="hero-stat"><div class="hero-stat-number" data-count="14">0</div><div class="hero-stat-label">Ani de expertiză</div></div>
+        <div class="hero-stat"><div class="hero-stat-number procent" data-count="98">0</div><div class="hero-stat-label">Retenție clienți</div></div>
       </div>
     </div>
   </section>
@@ -94,124 +78,57 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Servicii de bază</span>
-        <h2 class="section-title">Servicii IT complete</h2>
-        <p class="section-subtitle">Soluții end-to-end pentru a vă proteja, conecta și dezvolta afacerea.</p>
+        <span class="section-badge">Oferta noastră</span>
+        <h2 class="section-title">Servicii IT Complete</h2>
+        <p class="section-subtitle">Soluții end-to-end concepute pentru a vă proteja, conecta și dezvolta afacerea.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-card-icon">🎥</div><h3 class="feature-card-title">Supraveghere analogică și IP</h3><p class="feature-card-desc">Monitorizare video de înaltă definiție, acces la distanță și sisteme de înregistrare inteligentă pentru securitate completă.</p><a href="servicii.html#supraveghere" class="feature-card-link">Aflați mai multe →</a></div>
-        <div class="feature-card"><div class="feature-card-icon">🛡️</div><h3 class="feature-card-title">Control acces și alarme</h3><p class="feature-card-desc">Acces biometrice, pe bază de card, detectare intruziune și sisteme anti-efracție pentru protecția spațiilor.</p><a href="servicii.html#acces" class="feature-card-link">Aflați mai multe →</a></div>
-        <div class="feature-card"><div class="feature-card-icon">🌐</div><h3 class="feature-card-title">Rețele LAN și cablaje</h3><p class="feature-card-desc">Cablaje structurate, fibră optică, Wi-Fi enterprise și implementare securitate rețea.</p><a href="retele.html" class="feature-card-link">Aflați mai multe →</a></div>
-        <div class="feature-card"><div class="feature-card-icon">💻</div><h3 class="feature-card-title">Consultanță și suport IT</h3><p class="feature-card-desc">Helpdesk, suport la distanță, administrare servere și întreținere proactivă cu SLA personalizate.</p><a href="servicii.html#suport" class="feature-card-link">Aflați mai multe →</a></div>
-        <div class="feature-card"><div class="feature-card-icon">🖥️</div><h3 class="feature-card-title">Hardware și stații de lucru</h3><p class="feature-card-desc">Configurare stații de lucru, întreținere preventivă și gestionarea ciclului de viață al echipamentelor.</p><a href="servicii.html#hardware" class="feature-card-link">Aflați mai multe →</a></div>
-        <div class="feature-card"><div class="feature-card-icon">🔒</div><h3 class="feature-card-title">Securitate date și backup</h3><p class="feature-card-desc">Antivirus, firewall, criptare date, backup automat și planificare pentru dezastru.</p><a href="servicii.html#securitate" class="feature-card-link">Aflați mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">🎥</div><h3 class="feature-card-title">Supraveghere Analog & IP</h3><p class="feature-card-desc">Monitorizare video de înaltă definiție, acces la distanță și sisteme inteligente de înregistrare.</p><a href="servicii.html#supraveghere" class="feature-card-link">Află mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">🛡️</div><h3 class="feature-card-title">Control Acces & Alarmă</h3><p class="feature-card-desc">Acces biometric, pe bază de card, detectare intruziuni și sisteme anti-furt.</p><a href="servicii.html#control-acces" class="feature-card-link">Află mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">🌐</div><h3 class="feature-card-title">Rețele LAN & Cablaj</h3><p class="feature-card-desc">Cablaj structurat, fibră optică, Wi-Fi enterprise și implementare securitate rețea.</p><a href="retele-lan.html" class="feature-card-link">Află mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">💻</div><h3 class="feature-card-title">Consultanță & Suport IT</h3><p class="feature-card-desc">Helpdesk, asistență la distanță, administrare servere și mentenanță proactivă.</p><a href="servicii.html#suport" class="feature-card-link">Află mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">🖥️</div><h3 class="feature-card-title">Hardware & Stații Lucru</h3><p class="feature-card-desc">Configurare stații, mentenanță preventivă și gestionarea ciclului de viață hardware.</p><a href="servicii.html#hardware" class="feature-card-link">Află mai multe →</a></div>
+        <div class="feature-card"><div class="feature-card-icon">🔒</div><h3 class="feature-card-title">Securitate Date & Backup</h3><p class="feature-card-desc">Antivirus, firewall, criptare date, backup automat și planificare recuperare dezastre.</p><a href="servicii.html#securitate" class="feature-card-link">Află mai multe →</a></div>
       </div>
     </div>
   </section>
 
-  <!-- Despre noi / De ce să ne alegeți -->
+  <!-- Despre noi -->
   <section class="about-section section">
     <div class="container about-grid">
       <div class="about-image-wrapper"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Echipa Levobit" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;"></div>
-      <div><h2 class="about-content-title">Partenerul dvs. de încredere în tehnologie</h2>
-        <p class="about-content-text">Levobit combină expertiza tehnică profundă cu o abordare centrată pe client. De la sisteme de supraveghere și control acces la infrastructuri complexe de rețea, livrăm soluții IT robuste, pregătite pentru viitor.</p>
-        <div class="about-checklist">
-            <div class="about-check">
-                <span class="about-check-icon">✓</span> Peste 14 ani experiență</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> Ingineri certificați</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> Acoperire națională</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> Asistență de urgență 24/7</div>
-            </div><a href="contact.html" class="btn btn-primary">Solicitați o întâlnire</a></div>
+      <div><h2 class="about-content-title">Partenerul tău tehnologic de încredere</h2>
+        <p class="about-content-text">Levobit combină expertiza tehnică profundă cu o abordare centrată pe client. De la supraveghere și control acces la infrastructuri de rețea complexe, livrăm soluții IT robuste și pregătite pentru viitor.</p>
+        <div class="about-checklist"><div class="about-check"><span class="about-check-icon">✓</span> Peste 14 ani experiență</div><div class="about-check"><span class="about-check-icon">✓</span> Ingineri certificați</div><div class="about-check"><span class="about-check-icon">✓</span> Acoperire națională</div><div class="about-check"><span class="about-check-icon">✓</span> Suport de urgență 24/7</div></div><a href="contact.html" class="btn btn-primary">Programează o întâlnire</a></div>
     </div>
   </section>
 
-  <!-- Statistici -->
-  <section class="section" style="padding-top:0">
-    <div class="container hero-stats">
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="1000">0</div>
-            <div class="hero-stat-label">Proiecte finalizate</div>
-        </div>
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="14">0</div>
-            <div class="hero-stat-label">Ani de experiență</div>
-        </div>
-        <div class="hero-stat">
-            <div class="hero-stat-number procent" data-count="98">0</div>
-            <div class="hero-stat-label">Retenție clienți</div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Secțiune CTA -->
+  <!-- CTA -->
   <section class="cta-section">
     <div class="container cta-content">
-        <h2 class="cta-title">Pregătit să vă modernizați infrastructura IT?</h2>
-        <p class="cta-text">Solicitați o consultanță gratuită, fără obligații, astăzi.</p>
-        <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-white">Contactați-ne acum</a>
-            <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a>
-        </div>
+        <h2 class="cta-title">Ești gata să modernizezi infrastructura IT?</h2>
+        <p class="cta-text">Primește o consultație gratuită, fără obligații.</p>
+        <div class="cta-buttons"><a href="contact.html" class="btn btn-white">Contactează-ne</a><a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
-                <p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p>
-                    <div class="footer-social">
-                     <a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a>
-                    </div>
-            </div>
-            <div>
-                <h4 class="footer-heading">Servicii</h4>
-                <ul class="footer-links">
-                    <li><a href="servicii.html#supraveghere">Supraveghere</a></li>
-                    <li><a href="servicii.html#acces">Control acces</a></li>
-                    <li><a href="retele.html">Rețele LAN</a></li>
-                    <li><a href="servicii.html#suport">Suport IT</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Companie</h4>
-                <ul class="footer-links">
-                    <li><a href="clienti.html">Clienți</a></li>
-                    <li><a href="stiri.html">Știri</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
-                    <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
-                    <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Levobit — Toate drepturile rezervate.</p>
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p><div class="footer-social"><a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links"><li><a href="servicii.html#supraveghere">Supraveghere</a></li><li><a href="servicii.html#control-acces">Control acces</a></li><li><a href="retele-lan.html">Rețele LAN</a></li><li><a href="servicii.html#suport">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="clienti.html">Clienți</a></li><li><a href="noutati.html">Noutăți</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
     </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Toate drepturile rezervate.</p></div>
+  </div>
 </footer>
 
-<!-- Meniu mobil -->
-<div class="mobile-menu" id="mobileMenu"><div class="mobile-nav">
-    <a href="/ro/index.html" class="mobile-nav-link active">Acasă</a>
-    <a href="servicii.html" class="mobile-nav-link">Servicii</a>
-    <a href="retele.html" class="mobile-nav-link">Rețele LAN</a>
-    <a href="clienti.html" class="mobile-nav-link">Clienți</a>
-    <a href="stiri.html" class="mobile-nav-link">Știri</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html" class="mobile-nav-link active">Acasă</a><a href="servicii.html" class="mobile-nav-link">Servicii</a><a href="retele-lan.html" class="mobile-nav-link">Rețele LAN</a><a href="clienti.html" class="mobile-nav-link">Clienți</a><a href="noutati.html" class="mobile-nav-link">Noutăți</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
+  <div class="mobile-lang-switcher"><a href="../en/index.html" class="mobile-lang-option">🇬🇧 English</a><a href="../hu/index.html" class="mobile-lang-option">🇭🇺 Magyar</a><a href="index.html" class="mobile-lang-option active">🇷🇴 Română</a></div>
 </div>
-<div class="mobile-lang-switcher">
-    <a href="../ro/index.html" class="mobile-lang-option active">🇷🇴 Română</a>
-    <a href="../hu/index.html" class="mobile-lang-option">🇭🇺 Magyar</a>
-    <a href="../en/index.html" class="mobile-lang-option">🇬🇧 English</a>
-</div></div>
 
 <script src="../js/main.js"></script>
 </body>

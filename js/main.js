@@ -80,4 +80,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800);
     });
   }
+
+  // ----- SLIDESHOW FUNCTION (dodano) -----
+  function initSlideshow() {
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    if (!slides.length) return; // če ni elementov, ne naredi nič (services.html nima slideshowa)
+    let currentIndex = 0;
+    let interval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      const next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlideshow() {
+      if (interval) clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    indicators.forEach(ind => {
+      ind.addEventListener('click', () => {
+        const index = parseInt(ind.getAttribute('data-index'), 10);
+        if (!isNaN(index)) {
+          showSlide(index);
+          startSlideshow(); // reset timer
+        }
+      });
+    });
+
+    startSlideshow();
+  }
+
+  initSlideshow();
+  // ----- konec dodatka -----
 });

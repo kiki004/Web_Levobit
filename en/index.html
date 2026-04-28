@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Levobit – Professional IT Solutions & Services</title>
-  <meta name="description" content="Levobit provides professional IT solutions including surveillance systems, access control, network infrastructure, hardware/software solutions and online support. Your trusted technology partner.">
+  <meta name="description" content="Levobit provides professional IT solutions including surveillance systems, access control, network infrastructure, hardware/software solutions and online support.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -21,12 +21,12 @@
         </a>
       </div>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="../en/index.html" class="active">Home</a></li>
-        <li><a href="../en/services.html">Services</a></li>
-        <li><a href="../en/networks.html">LAN Networks</a></li>
-        <li><a href="../en/customers.html">Customers</a></li>
-        <li><a href="../en/news.html">News</a></li>
-        <li><a href="../en/contact.html">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="networks.html">LAN Networks</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li class="lang-switcher">
           <div class="lang-current" onclick="toggleLangDropdown()">
             <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
@@ -35,22 +35,13 @@
           </div>
           <div class="lang-dropdown" id="langDropdown">
             <a href="../index.html" class="lang-option">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
-                    <span class="lang-label">Română</span>
-                </span>
+              <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română
             </a>
             <a href="../hu/index.html" class="lang-option">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
-                    <span class="lang-label">Magyar</span>
-                </span>
+              <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar
             </a>
-            <a href="../en/index.html" class="lang-option active">
-                <span class="lang-option-content">
-                    <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
-                    <span class="lang-label">English</span>
-                </span>
+            <a href="index.html" class="lang-option active">
+              <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English
             </a>
           </div>
         </li>
@@ -65,33 +56,47 @@
 </header>
 
 <main>
-  <!-- Hero Section -->
+  <!-- Hero z dinamičnim ozadjem (slideshow) -->
   <section class="hero">
-    <div class="hero-grid"></div>
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('../img/slides/slide1.png');"></div>
+      <div class="slide" style="background-image: url('../img/slides/slide2.jpg');"></div>
+      <div class="slide" style="background-image: url('../img/slides/slide3.jpg');"></div>
+    </div>
+    <div class="slideshow-indicators">
+      <span class="indicator active" data-index="0"></span>
+      <span class="indicator" data-index="1"></span>
+      <span class="indicator" data-index="2"></span>
+    </div>
     <div class="hero-particles">
       <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
       <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
     <div class="container hero-content">
-    <!-- <div class="hero-badge"><span class="hero-badge-dot"></span> Since 2004 — Innovation Partner</div> -->
       <h1 class="hero-title">Professional <span class="hero-title-gradient">IT Solutions</span> for Your Business</h1>
       <p class="hero-subtitle">Complete IT infrastructure, cybersecurity, surveillance, and automation services. Trusted by hundreds of companies across Romania.</p>
       <div class="hero-buttons">
         <a href="contact.html" class="btn btn-primary">Free Consultation →</a>
         <a href="services.html" class="btn btn-outline">Explore Services</a>
       </div>
-      <div class="hero-trust">
-        <div class="hero-trust-label">TRUSTED BY INDUSTRY LEADERS</div>
-        <div class="hero-trust-badges">
-          <span class="hero-trust-badge">✓ 1000+ Projects</span>
-          <span class="hero-trust-badge">✓ 24/7 Support</span>
-          <span class="hero-trust-badge">✓ ISO 27001 Certified</span>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number" data-count="1000">0</div>
+          <div class="hero-stat-label">Projects delivered</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number" data-count="14">0</div>
+          <div class="hero-stat-label">Years expertise</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number procent" data-count="98">0</div>
+          <div class="hero-stat-label">Client retention</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
+  <!-- Services overview -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -117,34 +122,12 @@
       <div><h2 class="about-content-title">Your reliable technology partner</h2>
         <p class="about-content-text">Levobit combines deep technical expertise with a client-first approach. From surveillance and access control to complex network infrastructure, we deliver robust, future-proof IT solutions.</p>
         <div class="about-checklist">
-            <div class="about-check">
-                <span class="about-check-icon">✓</span> 14+ years experience</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> Certified engineers</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> Full Romania coverage</div>
-                <div class="about-check"><span class="about-check-icon">✓</span> 24/7 emergency support</div>
-            </div><a href="contact.html" class="btn btn-primary">Schedule a meeting</a></div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="section" style="padding-top:0">
-    <div class="container hero-stats">
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="1000">0</div>
-            <div class="hero-stat-label">Projects delivered</div>
-        </div>
-        <!-- <div class="hero-stat">
-            <div class="hero-stat-number" data-count="320">0</div>
-            <div class="hero-stat-label">Happy clients</div>
-        </div> -->
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="14">0</div>
-            <div class="hero-stat-label">Years expertise</div>
-        </div>
-        <div class="hero-stat">
-            <div class="hero-stat-number procent" data-count="98">0</div>
-            <div class="hero-stat-label">Client retention</div>
-        </div>
+            <div class="about-check"><span class="about-check-icon">✓</span> 14+ years experience</div>
+            <div class="about-check"><span class="about-check-icon">✓</span> Certified engineers</div>
+            <div class="about-check"><span class="about-check-icon">✓</span> Full Romania coverage</div>
+            <div class="about-check"><span class="about-check-icon">✓</span> 24/7 emergency support</div>
+        </div><a href="contact.html" class="btn btn-primary">Schedule a meeting</a>
+      </div>
     </div>
   </section>
 
@@ -158,67 +141,40 @@
             <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a>
         </div>
     </div>
-</section>
+  </section>
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
-                <p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and e-commerce development.</p>
-                    <div class="footer-social">
-
-                     <a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a>
-          
-                    </div>
-            </div>
-            <div>
-                <h4 class="footer-heading">Services</h4>
-                <ul class="footer-links">
-                    <li><a href="services.html#surveillance">Surveillance</a></li>
-                    <li><a href="services.html#access">Access Control</a></li>
-                    <li><a href="networks.html">LAN Networks</a></li>
-                    <li><a href="services.html#support">IT Support</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Company</h4>
-                <ul class="footer-links">
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Contact</h4>
-                <ul class="footer-links">
-                <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
-                <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
-                <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Levobit — All rights reserved.</p>
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
+        <p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and e-commerce development.</p>
+        <div class="footer-social"><a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div>
+      </div>
+      <div><h4 class="footer-heading">Services</h4><ul class="footer-links"><li><a href="services.html#surveillance">Surveillance</a></li><li><a href="services.html#access">Access Control</a></li><li><a href="networks.html">LAN Networks</a></li><li><a href="services.html#support">IT Support</a></li></ul></div>
+      <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="customers.html">Customers</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
     </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — All rights reserved.</p></div>
+  </div>
 </footer>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu"><div class="mobile-nav">
-    <a href="/en/index.html" class="mobile-nav-link active">Home</a>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link active">Home</a>
     <a href="services.html" class="mobile-nav-link">Services</a>
     <a href="networks.html" class="mobile-nav-link">LAN Networks</a>
     <a href="customers.html" class="mobile-nav-link">Customers</a>
     <a href="news.html" class="mobile-nav-link">News</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
-</div>
-<div class="mobile-lang-switcher">
-    <a href="../ro/index.html" class="mobile-lang-option">🇷🇴 Română</a>
+  </div>
+  <div class="mobile-lang-switcher">
+    <a href="../index.html" class="mobile-lang-option">🇷🇴 Română</a>
     <a href="../hu/index.html" class="mobile-lang-option">🇭🇺 Magyar</a>
-    <a href="../en/index.html" class="mobile-lang-option active">🇬🇧 English</a>
-</div></div>
+    <a href="index.html" class="mobile-lang-option active">🇬🇧 English</a>
+  </div>
+</div>
 
 <script src="../js/main.js"></script>
 </body>

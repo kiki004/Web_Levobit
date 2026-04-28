@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – Știri și noutăți</title>
+  <meta name="description" content="Rămâneți la curent cu cele mai recente știri, anunțuri și actualizări Facebook de la Levobit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .news-feed-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      overflow: hidden;
+    }
+    rssapp-carousel { display: block; width: 100%; }
+    .rssapp-carousel .rssapp-carousel-slides,
+    .rssapp-carousel-slides {
+      display: grid !important;
+      grid-template-columns: repeat(1, 1fr) !important;
+      gap: 20px;
+      transition: none !important;
+    }
+    .rssapp-carousel .rssapp-carousel-slide,
+    .rssapp-carousel-slide {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    @media (min-width: 768px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    .rssapp-carousel-nav { display: none; }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="retele-lan.html">Rețele LAN</a></li>
+        <li><a href="clienti.html">Clienți</a></li>
+        <li><a href="stiri.html" class="active">Știri</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/news.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/hirek.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="stiri.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Rămâneți informați</div>
+      <h1 class="hero-title">Ultimele <span class="hero-title-gradient">Știri</span></h1>
+      <p class="hero-subtitle">Urmăriți activitatea, proiectele și noutățile tehnologice – direct de pe pagina noastră de Facebook.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Flux live</span>
+        <h2 class="section-title">Actualizări Facebook</h2>
+        <p class="section-subtitle">Toate anunțurile, evenimentele și noutățile într-un singur loc.</p>
+      </div>
+      <div class="news-feed-wrapper">
+        <rssapp-carousel id="tONrNQHo1thjm7ye"></rssapp-carousel>
+        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Urmăriți-ne pe Facebook</h2>
+      <p class="cta-text">Primiți actualizări în timp real, promoții și conținut din culise.</p>
+      <div class="cta-buttons">
+        <a href="https://www.facebook.com/levobit" target="_blank" rel="noopener" class="btn btn-white">Vizitați pagina Facebook →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p><div class="footer-social"><a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links"><li><a href="servicii.html#supraveghere">Supraveghere</a></li><li><a href="servicii.html#control-acces">Control acces</a></li><li><a href="retele-lan.html">Rețele LAN</a></li><li><a href="servicii.html#suport">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="clienti.html">Clienți</a></li><li><a href="stiri.html">Știri</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html">Acasă</a><a href="servicii.html">Servicii</a><a href="retele-lan.html">Rețele LAN</a><a href="clienti.html">Clienți</a><a href="stiri.html" class="active">Știri</a><a href="contact.html">Contact</a></div>
+  <div class="mobile-lang-switcher"><a href="../en/news.html">🇬🇧 English</a><a href="../hu/hirek.html">🇭🇺 Magyar</a><a href="stiri.html" class="active">🇷🇴 Română</a></div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

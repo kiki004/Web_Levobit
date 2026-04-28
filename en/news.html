@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – News & Updates</title>
+  <meta name="description" content="Stay updated with the latest news, announcements, and Facebook updates from Levobit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .news-feed-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      overflow: hidden;
+    }
+    rssapp-carousel {
+      display: block;
+      width: 100%;
+    }
+    .rssapp-carousel .rssapp-carousel-slides,
+    .rssapp-carousel-slides {
+      display: grid !important;
+      grid-template-columns: repeat(1, 1fr) !important;
+      gap: 20px;
+      transition: none !important;
+    }
+    .rssapp-carousel .rssapp-carousel-slide,
+    .rssapp-carousel-slide {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    @media (min-width: 768px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    .rssapp-carousel-nav {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="networks.html">LAN Networks</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
+            <span class="lang-code">EN</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../ro/stiri.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+            <a href="../hu/hirek.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="news.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Stay informed</div>
+      <h1 class="hero-title">Latest <span class="hero-title-gradient">News</span></h1>
+      <p class="hero-subtitle">Follow our activity, projects, and technology updates – directly from our Facebook page.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Live feed</span>
+        <h2 class="section-title">Facebook Updates</h2>
+        <p class="section-subtitle">All our announcements, events, and news in one place.</p>
+      </div>
+      <div class="news-feed-wrapper">
+        <rssapp-carousel id="tONrNQHo1thjm7ye"></rssapp-carousel>
+        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Follow us on Facebook</h2>
+      <p class="cta-text">Get real‑time updates, promotions and behind‑the‑scenes content.</p>
+      <div class="cta-buttons">
+        <a href="https://www.facebook.com/levobit" target="_blank" rel="noopener" class="btn btn-white">Visit Facebook Page →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and e-commerce development.</p><div class="footer-social"><a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Services</h4><ul class="footer-links"><li><a href="services.html#surveillance">Surveillance</a></li><li><a href="services.html#access">Access Control</a></li><li><a href="networks.html">LAN Networks</a></li><li><a href="services.html#support">IT Support</a></li></ul></div>
+      <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="customers.html">Customers</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — All rights reserved.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="networks.html">LAN Networks</a><a href="customers.html">Customers</a><a href="news.html" class="active">News</a><a href="contact.html">Contact</a></div>
+  <div class="mobile-lang-switcher"><a href="../ro/stiri.html">🇷🇴 Română</a><a href="../hu/hirek.html">🇭🇺 Magyar</a><a href="news.html" class="active">🇬🇧 English</a></div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
