@@ -17,7 +17,7 @@ if (!empty($_POST['website'])) {
 $ip = $_SERVER['REMOTE_ADDR'];
 $rate_key = 'last_contact_' . $ip;
 if (isset($_SESSION[$rate_key]) && (time() - $_SESSION[$rate_key] < 3)) {
-    echo json_encode(['success' => false, 'message' => 'Prosimo počakajte nekaj sekund pred pošiljanjem.']);
+    echo json_encode(['success' => false, 'message' => 'Please wait a few seconds before sending another message.']);
     exit;
 }
 $_SESSION[$rate_key] = time();
@@ -29,28 +29,28 @@ $subject = trim($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
 if (empty($name) || empty($email) || empty($subject) || empty($message)) {
-    echo json_encode(['success' => false, 'message' => 'Izpolnite vsa obvezna polja.']);
+    echo json_encode(['success' => false, 'message' => 'Please fill in all required fields.']);
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo json_encode(['success' => false, 'message' => 'Neveljaven e-poštni naslov.']);
+    echo json_encode(['success' => false, 'message' => 'Invalid email address.']);
     exit;
 }
 
-$to = 'kristjan.lukek@gmail.com'; // office@levobit.ro
-$email_subject = "Kontakt obrazec: $subject";
-$email_body = "Sporočilo s spletne strani Levobit.\n\n"
-            . "Ime: $name\n"
-            . "E-mail: $email\n"
-            . "Telefon: $phone\n\n"
-            . "Sporočilo:\n$message\n";
+$to = 'kristjan.lukek@gmail.com'; // Replace with office@levobit.ro for production
+$email_subject = "Contact form: $subject";
+$email_body = "Message from Levobit website.\n\n"
+            . "Name: $name\n"
+            . "Email: $email\n"
+            . "Phone: $phone\n\n"
+            . "Message:\n$message\n";
 $headers = "From: $email\r\n";
 $headers .= "Reply-To: $email\r\n";
 
 if (mail($to, $email_subject, $email_body, $headers)) {
-    echo json_encode(['success' => true, 'message' => 'Sporočilo poslano! Odgovorili vam bomo v najkrajšem času.']);
+    echo json_encode(['success' => true, 'message' => 'Message sent! We will get back to you as soon as possible.']);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Napaka strežnika. Pošljite e-pošto neposredno na office@levobit.ro.']);
+    echo json_encode(['success' => false, 'message' => 'Server error. Please send an email directly to office@levobit.ro.']);
 }
 ?>
