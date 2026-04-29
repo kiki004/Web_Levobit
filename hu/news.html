@@ -9,43 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .news-feed-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      background: var(--bg-white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      overflow: hidden;
-    }
-    rssapp-carousel { display: block; width: 100%; }
-    .rssapp-carousel .rssapp-carousel-slides,
-    .rssapp-carousel-slides {
-      display: grid !important;
-      grid-template-columns: repeat(1, 1fr) !important;
-      gap: 20px;
-      transition: none !important;
-    }
-    .rssapp-carousel .rssapp-carousel-slide,
-    .rssapp-carousel-slide {
-      width: 100% !important;
-      margin: 0 !important;
-    }
-    @media (min-width: 768px) {
-      .rssapp-carousel .rssapp-carousel-slides,
-      .rssapp-carousel-slides {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-    }
-    @media (min-width: 1024px) {
-      .rssapp-carousel .rssapp-carousel-slides,
-      .rssapp-carousel-slides {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
-    .rssapp-carousel-nav { display: none; }
-  </style>
+  
 </head>
 <body>
 
@@ -55,11 +19,11 @@
       <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Kezdőlap</a></li>
-        <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
-        <li><a href="lan-halozatok.html">LAN hálózatok</a></li>
-        <li><a href="ugyfeleink.html">Ügyfeleink</a></li>
-        <li><a href="hirek.html" class="active">Hírek</a></li>
-        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        <li><a href="services.html">Szolgáltatások</a></li>
+        <li><a href="networks.html">LAN hálózatok</a></li>
+        <li><a href="customers.html">Ügyfeleink</a></li>
+        <li><a href="news.html" class="active">Hírek</a></li>
+        <li><a href="contact.html">Kapcsolat</a></li>
         <li class="lang-switcher">
           <div class="lang-current" onclick="toggleLangDropdown()">
             <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
@@ -68,8 +32,8 @@
           </div>
           <div class="lang-dropdown" id="langDropdown">
             <a href="../en/news.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
-            <a href="../ro/stiri.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
-            <a href="hirek.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="../ro/news.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+            <a href="news.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
           </div>
         </li>
       </ul>
@@ -81,6 +45,14 @@
 <main>
   <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
     <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
     <div class="container hero-content" style="max-width: 800px;">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Maradjon naprakész</div>
       <h1 class="hero-title">Legfrissebb <span class="hero-title-gradient">Hírek</span></h1>
@@ -116,9 +88,9 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Professzionális IT-megoldások – megfigyelés, beléptetés, hálózatok, támogatás és e-kereskedelmi fejlesztés.</p><div class="footer-social"><a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
-      <div><h4 class="footer-heading">Szolgáltatások</h4><ul class="footer-links"><li><a href="szolgaltatasok.html#kamera">Megfigyelés</a></li><li><a href="szolgaltatasok.html#belepteto">Beléptetés</a></li><li><a href="lan-halozatok.html">LAN hálózatok</a></li><li><a href="szolgaltatasok.html#tamogatas">IT támogatás</a></li></ul></div>
-      <div><h4 class="footer-heading">Cég</h4><ul class="footer-links"><li><a href="ugyfeleink.html">Ügyfeleink</a></li><li><a href="hirek.html">Hírek</a></li><li><a href="kapcsolat.html">Kapcsolat</a></li></ul></div>
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Professzionális IT-megoldások – megfigyelés, beléptetés, hálózatok, támogatás és e-kereskedelmi fejlesztés.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Szolgáltatások</h4><ul class="footer-links"><li><a href="services.html#cctv">Megfigyelés</a></li><li><a href="services.html#access">Beléptetés</a></li><li><a href="networks.html">LAN hálózatok</a></li><li><a href="services.html#helpdesk">IT támogatás</a></li></ul></div>
+      <div><h4 class="footer-heading">Cég</h4><ul class="footer-links"><li><a href="customers.html">Ügyfeleink</a></li><li><a href="news.html">Hírek</a></li><li><a href="contact.html">Kapcsolat</a></li></ul></div>
       <div><h4 class="footer-heading">Kapcsolat</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Levobit — Minden jog fenntartva.</p></div>
@@ -126,8 +98,8 @@
 </footer>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav"><a href="index.html">Kezdőlap</a><a href="szolgaltatasok.html">Szolgáltatások</a><a href="lan-halozatok.html">LAN hálózatok</a><a href="ugyfeleink.html">Ügyfeleink</a><a href="hirek.html" class="active">Hírek</a><a href="kapcsolat.html">Kapcsolat</a></div>
-  <div class="mobile-lang-switcher"><a href="../en/news.html">🇬🇧 English</a><a href="../ro/stiri.html">🇷🇴 Română</a><a href="hirek.html" class="active">🇭🇺 Magyar</a></div>
+  <div class="mobile-nav"><a href="index.html">Kezdőlap</a><a href="services.html">Szolgáltatások</a><a href="networks.html">LAN hálózatok</a><a href="customers.html">Ügyfeleink</a><a href="news.html" class="active">Hírek</a><a href="contact.html">Kapcsolat</a></div>
+  <div class="mobile-lang-switcher"><a href="../en/news.html">🇬🇧 English</a><a href="../ro/news.html">🇷🇴 Română</a><a href="news.html" class="active">🇭🇺 Magyar</a></div>
 </div>
 
 <script src="../js/main.js"></script>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – Clienții noștri</title>
+  <meta name="description" content="Levobit a furnizat soluții IT unei game largi de clienți de încredere. Vedeți portofoliul nostru de clienți satisfăcuți.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .client-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px 16px;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+    }
+    .client-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+    .client-card a { display: block; width: 100%; }
+    .client-card img {
+      max-width: 80%;
+      max-height: 80px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .client-card span { font-weight: 600; color: var(--text); font-size: 1.1rem; }
+    @media (max-width: 768px) {
+      .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .client-card { min-height: 110px; padding: 16px; }
+      .client-card img { max-height: 60px; }
+    }
+    @media (max-width: 480px) { .clients-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Acasă</a></li>
+        <li><a href="services.html">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html" class="active">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/customers.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/customers.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="customers.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Parteneri de încredere</div>
+      <h1 class="hero-title">Clienții <span class="hero-title-gradient">noștri</span></h1>
+      <p class="hero-subtitle">Suntem mândri să colaborăm cu peste 100 de companii și instituții publice din România.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Portofoliu</span>
+        <h2 class="section-title">Cine are încredere în Levobit</h2>
+        <p class="section-subtitle">O selecție a partenerilor noștri de lungă durată.</p>
+      </div>
+      <div class="clients-grid">
+        <div class="client-card"><a href="https://harmopan.ro/" target="_blank" rel="noopener"><img src="../img/clients/Harmopan_logopack__Rajztabla-1-705x705.png" alt="Harmopan"></a></div>
+        <div class="client-card"><a href="http://www.electromatic.ro/" target="_blank" rel="noopener"><img src="../img/clients/electromatic.png" alt="Electromatic"></a></div>
+        <div class="client-card"><a href="https://www.marefalva.ro/" target="_blank" rel="noopener"><img src="../img/clients/marefalva.png" alt="Marefalva"></a></div>
+        <div class="client-card"><a href="https://tusnad.com/" target="_blank" rel="noopener"><img src="../img/clients/tusnad-705x705.jpg" alt="Tusnad"></a></div>
+        <div class="client-card"><a href="https://www.perlaharghitei.ro/" target="_blank" rel="noopener"><img src="../img/clients/perla-705x705.jpg" alt="Perla Harghitei"></a></div>
+        <div class="client-card"><a href="https://www.villabellini.ro/" target="_blank" rel="noopener"><img src="../img/clients/logo_bellini_white_150.png" alt="Villa Bellini"></a></div>
+        <div class="client-card"><a href="https://multimed.ro/" target="_blank" rel="noopener"><img src="../img/clients/multimed.jpg" alt="Multimed"></a></div>
+        <div class="client-card"><a href="https://ecotiny.house/" target="_blank" rel="noopener"><img src="../img/clients/eth.png" alt="Ecotiny"></a></div>
+        <div class="client-card"><a href="https://fermag.ro/" target="_blank" rel="noopener"><img src="../img/clients/fermag.png" alt="Fermag"></a></div>
+        <div class="client-card"><a href="http://vianapolipizzeria.com/" target="_blank" rel="noopener"><img src="../img/clients/pizza-450x335.png" alt="Vianapoli Pizza"></a></div>
+        <div class="client-card"><a href="https://helyenvalo.ro/" target="_blank" rel="noopener"><img src="../img/clients/helyenvalo-450x191.png" alt="Helyenvalo"></a></div>
+        <div class="client-card"><a href="http://www.funbike.ro/" target="_blank" rel="noopener"><img src="../img/clients/funbike-4-1.png" alt="Funbike"></a></div>
+        <div class="client-card"><a href="https://norasport.ro/" target="_blank" rel="noopener"><img src="../img/clients/norasport.png" alt="Norasport"></a></div>
+        <div class="client-card"><a href="https://telescop-expert.ro/" target="_blank" rel="noopener"><img src="../img/clients/telescop-450x180.png" alt="Telescop Expert"></a></div>
+        <div class="client-card"><a href="https://www.covorpersonalizat.ro/" target="_blank" rel="noopener"><img src="../img/clients/covor-300x132.png" alt="Covor Personalizat"></a></div>
+        <div class="client-card"><a href="https://judetulharghita.ro/" target="_blank" rel="noopener"><img src="../img/clients/harghita.png" alt="Harghita County"></a></div>
+        <div class="client-card"><a href="http://www.autototal.ro/" target="_blank" rel="noopener"><img src="../img/clients/autototal.png" alt="Autototal"></a></div>
+        <div class="client-card"><span>Aferom Trans</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Deveniți următoarea noastră poveste de succes</h2>
+      <p class="cta-text">Lăsați-ne să vă ajutăm cu soluții IT profesionale adaptate afacerii dvs.</p>
+      <div class="cta-buttons"><a href="contact.html" class="btn btn-white">Contactați-ne</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links">
+        <li><a href="services.html#cctv">Supraveghere</a></li><li><a href="services.html#access">Control acces</a></li><li><a href="networks.html">Rețele LAN</a></li><li><a href="services.html#helpdesk">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="customers.html">Clienți</a></li><li><a href="news.html">Noutăți</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html">Acasă</a><a href="services.html">Servicii</a><a href="networks.html">Rețele LAN</a><a href="customers.html" class="active">Clienți</a><a href="news.html">Noutăți</a><a href="contact.html">Contact</a></div>
+  <div class="mobile-lang-switcher"><a href="../en/customers.html">🇬🇧 English</a><a href="../hu/ugyfeleink.html">🇭🇺 Magyar</a><a href="customers.html" class="active">🇷🇴 Română</a></div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

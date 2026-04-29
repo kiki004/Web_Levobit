@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – Teljes körű IT és biztonsági szolgáltatások | Hardver, Hálózatok, Megfigyelés</title>
+  <meta name="description" content="A Levobit professzionális IT-szolgáltatásokat nyújt: számítógép-karbantartás, adatbázisok, biztonsági mentés, strukturált hálózatok, VoIP, egyedi szoftverek, helpdesk, valamint videó megfigyelés, beléptető és riasztórendszerek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a href="services.html" class="active">Szolgáltatások</a></li>
+        <li><a href="networks.html">LAN hálózatok</a></li>
+        <li><a href="customers.html">Ügyfeleink</a></li>
+        <li><a href="news.html">Hírek</a></li>
+        <li><a href="contact.html">Kapcsolat</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
+            <span class="lang-code">HU</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/services.html" class="lang-option">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
+                    <span class="lang-label">English</span>
+                </span>
+            </a>
+            <a href="../ro/services.html" class="lang-option">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+                    <span class="lang-label">Română</span>
+                </span>
+            </a>
+            <a href="services.html" class="lang-option active">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
+                    <span class="lang-label">Magyar</span>
+                </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    </div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Teljes körű IT és biztonsági megoldások</div>
+      <h1 class="hero-title"><span class="hero-title-gradient">Szolgáltatásaink</span></h1>
+      <p class="hero-subtitle">A számítógép-karbantartástól és strukturált hálózatoktól a fejlett megfigyelésig és beléptetésig – minden technológiai igényét lefedjük.</p>
+      <div class="hero-buttons"><a href="#services-main" class="btn btn-primary">Szolgáltatások böngészése →</a><a href="contact.html" class="btn btn-outline">Ajánlatkérés</a></div>
+    </div>
+  </section>
+
+  <!-- Bevezetés -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Kik vagyunk</span>
+        <h2 class="section-title">Hardver, szoftver és biztonsági szakértelem</h2>
+        <p class="section-subtitle">A LevoBit egy IT-tanácsadó cég hardver- és szoftvertechnikai támogatással, szervizzel, számítógépes hálózatok kivitelezésével és adminisztrációjával, valamint egyedi szoftverfejlesztéssel. A professzionalizmusra építve cégünk magáncégekkel, iskolákkal, közintézményekkel dolgozik együtt, és teljes körű fizikai biztonsági megoldásokat kínál.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kétoszlopos elrendezés -->
+  <section class="section" id="services-main" style="padding-top: 0;">
+    <div class="container">
+      <div class="services-layout">
+        <div class="services-sidebar" id="servicesMenu">
+          <div class="service-menu-item active" data-service="cctv">🎥 Videó megfigyelés (CCTV)</div>
+          <div class="service-menu-item" data-service="access">🛡️ Beléptető és riasztórendszerek</div>
+          <div class="service-menu-item" data-service="itsecurity">🔒 IT biztonság & vírusvédelem</div>
+          <div class="service-menu-item" data-service="admin">💻 Számítógép-adminisztráció & karbantartás</div>
+          <div class="service-menu-item" data-service="database">🗄️ Adatbázis-adminisztráció</div>
+          <div class="service-menu-item" data-service="backup">☁️ Offsite biztonsági mentés & DR</div>
+          <div class="service-menu-item" data-service="networks">🔌 Strukturált hálózatok & kábelezés</div>
+          <div class="service-menu-item" data-service="pbx">📞 PBX & VoIP rendszerek</div>
+          <div class="service-menu-item" data-service="software">⚙️ Egyedi szoftverfejlesztés</div>
+          <div class="service-menu-item" data-service="helpdesk">🎧 Helpdesk & távoli támogatás</div>
+        </div>
+        <div class="services-content" id="serviceContent">
+          <div class="service-detail">
+            <h3>Videó megfigyelés (CCTV)</h3>
+            <p>Professzionális videó megfigyelő rendszereket szállítunk és telepítünk a teljes körű biztonsági monitorozáshoz.</p>
+            <ul><li>Analóg HD és IP kamerák (4MP, 4K opciók)</li><li>Távmegtekintés okostelefonnal vagy PC-vel</li><li>Intelligens mozgásérzékelés, éjjellátó, rögzítés NVR/DVR-en</li><li>Megoldások irodák, raktárak, üzletek és középületek számára</li><li>Teljes körű karbantartás és támogatás</li></ul>
+            <p>Szakértőink megtervezik a kamerák optimális elhelyezését a kritikus területek lefedésére és a beléptető rendszerekkel való integrációra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="about-section section">
+    <div class="container about-grid">
+      <div>
+        <h2 class="about-content-title">Miért bíznak a vállalatok a Levobitban</h2>
+        <p class="about-content-text">Ötvözzük a mély műszaki szakértelmet a proaktív, ügyfélközpontú megközelítéssel. Az IT-infrastruktúrától a fizikai biztonsági rendszerekig csapatunk robusztus, jövőbiztos megoldásokat szállít, amelyek növelik a hatékonyságot és a biztonságot.</p>
+        <div class="about-checklist">
+          <div class="about-check"><span class="about-check-icon">✓</span> 14+ év tapasztalat</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Tanúsított mérnökök és biztonsági szakértők</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> 24/7 vészhelyzeti támogatás</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Testreszabott szolgáltatási szerződések</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Kérjen ingyenes konzultációt</a>
+      </div>
+      <div class="about-image-wrapper">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit csapat" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section" style="padding-top:0">
+    <div class="container hero-stats">
+      <div class="hero-stat"><div class="hero-stat-number" data-count="1000">0</div><div class="hero-stat-label">Teljesített projektek</div></div>
+      <div class="hero-stat"><div class="hero-stat-number" data-count="14">0</div><div class="hero-stat-label">Éves szakértelem</div></div>
+      <div class="hero-stat"><div class="hero-stat-number procent" data-count="98">0</div><div class="hero-stat-label">Ügyfélmegtartás</div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Készen áll IT- és biztonsági infrastruktúrájának korszerűsítésére?</h2>
+      <p class="cta-text">Kérjen még ma kötelezettség nélküli konzultációt.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-white">Kapcsolatfelvétel most</a>
+        <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
+        <p class="footer-brand-desc">Professzionális IT-megoldások – megfigyelés, beléptetés, hálózatok, támogatás és egyedi szoftverek.</p>
+        <div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Szolgáltatások</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#cctv">Megfigyelés</a></li>
+          <li><a href="services.html#access">Beléptetés</a></li>
+          <li><a href="networks.html">LAN hálózatok</a></li>
+          <li><a href="services.html#helpdesk">IT támogatás</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Cég</h4>
+        <ul class="footer-links">
+          <li><a href="customers.html">Ügyfeleink</a></li>
+          <li><a href="news.html">Hírek</a></li>
+          <li><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Kapcsolat</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
+          <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
+          <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Minden jog fenntartva.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Kezdőlap</a>
+    <a href="services.html" class="mobile-nav-link active">Szolgáltatások</a>
+    <a href="networks.html" class="mobile-nav-link">LAN hálózatok</a>
+    <a href="customers.html" class="mobile-nav-link">Ügyfeleink</a>
+    <a href="news.html" class="mobile-nav-link">Hírek</a>
+    <a href="contact.html" class="mobile-nav-link">Kapcsolat</a>
+  </div>
+  <div class="mobile-lang-switcher">
+    <a href="../en/services.html" class="mobile-lang-option">🇬🇧 English</a>
+    <a href="../ro/services.html" class="mobile-lang-option">🇷🇴 Română</a>
+    <a href="services.html" class="mobile-lang-option active">🇭🇺 Magyar</a>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  // Az összes szolgáltatás adatai
+  const servicesData = {
+    cctv: `
+      <div class="service-detail">
+        <h3>Videó megfigyelés (CCTV)</h3>
+        <p>Professzionális videó megfigyelő rendszereket szállítunk és telepítünk a teljes körű biztonsági monitorozáshoz.</p>
+        <ul><li>Analóg HD és IP kamerák (4MP, 4K opciók)</li><li>Távmegtekintés okostelefonnal vagy PC-vel</li><li>Intelligens mozgásérzékelés, éjjellátó, rögzítés NVR/DVR-en</li><li>Megoldások irodák, raktárak, üzletek és középületek számára</li><li>Teljes körű karbantartás és támogatás</li></ul>
+        <p>Szakértőink megtervezik a kamerák optimális elhelyezését a kritikus területek lefedésére és a beléptető rendszerekkel való integrációra.</p>
+      </div>
+    `,
+    access: `
+      <div class="service-detail">
+        <h3>Beléptető és riasztórendszerek</h3>
+        <p>Védje létesítményét modern biztonsági megoldásokkal:</p>
+        <ul><li>Beléptetés: biometrikus (ujjlenyomat, arcfelismerés), RFID kártya, billentyűzet vagy mobilos hitelesítés</li><li>Behatolásérzékelés: mágneses érintkezők, mozgásérzékelők, üvegtörés-érzékelők</li><li>Betörésjelző és vagyonvédelmi rendszerek</li><li>Tűz- és füstérzékelés integráció</li><li>Központosított felügyeleti szoftver valós idejű riasztásokkal</li><li>24/7 monitorozási lehetőség és karbantartási szerződések</li></ul>
+        <p>Felmérjük igényeit és skálázható rendszereket telepítünk.</p>
+      </div>
+    `,
+    itsecurity: `
+      <div class="service-detail">
+        <h3>IT biztonság és vírusvédelem</h3>
+        <p>Védje digitális eszközeit vállalati szintű kiberbiztonsággal:</p>
+        <ul><li>Vírusvédelem / EDR minden munkaállomáson és szerveren</li><li>Következő generációs tűzfal konfigurálása és kezelése</li><li>Sebezhetőségi felmérések és penetrációs tesztek</li><li>E-mail biztonság, spam- és adathalászat elleni védelem</li><li>Adattitkosítás és biztonsági mentés védelme</li><li>Biztonsági auditok és GDPR-megfelelési segítségnyújtás</li></ul>
+      </div>
+    `,
+    admin: `
+      <div class="service-detail">
+        <h3>Számítógép-adminisztráció és karbantartás</h3>
+        <ul><li>Szoftver/hardver rendszerek telepítése és konfigurálása</li><li>Berendezések időszakos megelőző karbantartása</li><li>Szerviz az ügyfél telephelyén</li></ul>
+        <img src="../img/service_laptop.jpg" alt="Laptop szerviz" style="max-width:100%; margin:20px 0; border-radius:var(--radius); box-shadow:var(--shadow);">
+        <h3>Perifériák adminisztrációja és karbantartása</h3>
+        <ul><li>Berendezések telepítése és konfigurálása (nyomtatók, multifunkciós eszközök, szkennerek, projektorok stb.)</li><li>Megelőző karbantartás és fogyóeszközök beszerzése</li><li>Szerviz az ügyfél telephelyén</li></ul>
+        <h3>A hálózat kezelése és karbantartása</h3>
+        <ul><li>Szerverek és hálózati eszközök adminisztrációja és karbantartása</li><li>Internetkapcsolat optimalizálása</li><li>Hálózatok tervezése, konfigurálása és kivitelezése</li></ul>
+      </div>
+    `,
+    database: `
+      <div class="service-detail">
+        <h3>Adatbázis-adminisztráció</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>Az adatbázis-alkalmazások ma a legfontosabb üzleti alkalmazások. Akár Oracle, Firebird, SQL Server, Paradox vagy más adatbázisokat használ, kezelésük és karbantartásuk kritikus szükséglet. Szolgáltatásaink a következők:</p>
+            <ul><li>Több adatbázis kezelése</li><li>Teljesítmény- és rendelkezésre állási problémák proaktív kezelése</li><li>Problémák megoldása SQL elemzéssel és optimalizálással</li><li>Kritikus adatbázis-rendszerek replikálása a rendelkezésre állás biztosítása és az adatvesztés minimalizálása érdekében</li></ul>
+          </div>
+          <img src="../img/instalare_rack_1.jpg" alt="Szerver rack telepítés" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    backup: `
+      <div class="service-detail">
+        <h3>Offsite biztonsági mentési szolgáltatások</h3>
+        <p>Offsite Backup – Az információk és alkalmazások teljes és összetett védelme</p>
+        <ul><li>Védettek-e vállalata adatai és alkalmazásai a felhasználói hibák, hardverhibák, fájlok véletlen törlése és esetleges támadások ellen?</li><li>Az elveszett információkat nehéz vagy lehetetlen lesz helyreállítani, ha nem tárolja őket másik helyen. A LevoBit elemzi az Ön igényeit és testreszabott offsite mentési megoldásokat javasol.</li><li>Előnyök: Gyors hozzáférés a mentett információkhoz, garantált mentési időközök, minden létfontosságú elem biztonságban tartva.</li><li>Jellemzők: A feldolgozott információk folyamatos kezelése, tárolás nagy teljesítményű gépeken, további információbiztonsági szolgáltatások.</li></ul>
+      </div>
+    `,
+    networks: `
+      <div class="service-detail">
+        <h3>Strukturált hálózatok</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>A strukturált hálózatok az a kábelezési mód, ahol az összes hang-/adataljzat egy központi patch panelhez csatlakozik, ahonnan pontosan meghatározható, hogy ezeket a kapcsolatokat hogyan fogják használni. Minden aljzat csatlakoztatható (a patch panelen keresztül) egy hálózati kapcsolóhoz vagy egy híd patch panelhez egy PBX telefonhoz.</p>
+            <p>A strukturált kábelezés a következő alrendszerekkel rendelkezik: Belépés, távközlési szekrény, gerinc, vízszintes kábelezés, munkaterületi komponensek. Fő előnye: könnyebben karbantartható és hibaelhárítható, rugalmas és tartós. Cégünk elvégzi a strukturált hang-adat hálózatok koncepcióját, tervezését és kábelezését cat. 5 és cat. 6-a szabvány szerint.</p>
+          </div>
+          <img src="../img/cablare-structurata.jpg" alt="Strukturált kábelezés" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    pbx: `
+      <div class="service-detail">
+        <h3>PBX telefonrendszerek</h3>
+        <p>A PBX (Private Branch Exchange) egy vállalaton belül használt magánhálózat. A PBX telefonhasználói számos külső vonalat osztanak meg a kimenő telefonhívásokhoz. A PBX rendszer összeköti a vállalaton belüli telefonvonalakat, és csatlakoztatja azokat a nyilvános telefonhálózathoz (PSTN). A PBX-rendszerek fejlesztésének egyik legújabb trendje a VoIP PBX, más néven IP PBX, amely az internetprotokollt használja a hívások továbbítására.</p>
+      </div>
+    `,
+    software: `
+      <div class="service-detail">
+        <h3>Egyedi szoftverek</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>A nagy szoftverfejlesztők olyan termékeket hoztak létre, amelyek széles körű igényeket elégítenek ki, de nem mindegyik illeszkedik tökéletesen. A LevoBit skálázható szoftvermegoldásokkal áll elő, amelyeket hardvertechnológiákkal kombinál, beilleszkedve az ügyféloldali munkafolyamatokba, és olyan szoftveralkalmazást hoz létre, amely pontosan megfelel az ügyfél igényeinek.</p>
+            <p>A projekt végrehajtásának szakaszai, egyedi szoftver:</p>
+            <ul><li>az ügyfél követelményeinek gyűjtése és elemzése</li><li>a projekt specifikációinak elkészítése a kedvezményezettel közösen</li><li>a szerződés aláírása a projektnek megfelelően</li><li>szoftverfejlesztés a specifikációk alapján</li><li>az elkészült és tesztelt rendszer/szoftver leszállítása</li><li>telepítés, végleges tesztelés és hibaelhárítás</li><li>a megoldás bemutatása a könnyű használat érdekében</li></ul>
+          </div>
+          <img src="../img/software_la_comanda.jpg" alt="Egyedi szoftverfejlesztés" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    helpdesk: `
+      <div class="service-detail">
+        <h3>Online segítség és Helpdesk</h3>
+        <img src="../img/helpdesk.jpg" alt="Helpdesk támogatás" style="max-width:100%; margin:20px 0; border-radius:var(--radius);">
+        <p>IT helpdesk szolgáltatásokat kínálunk minden irodai feladathoz: szoftvertelepítések, eszközkonfigurációk, e-mail beállítások és még sok más. A helpdesk elengedhetetlen eszköze vállalkozásának a termelékenységet befolyásoló problémák kiküszöbölésére.</p>
+        <h3>A Helpdesk előnyei</h3>
+        <ul><li>Online segítségnyújtás és beavatkozási szolgáltatások</li><li>Egyetlen kapcsolattartó pont</li><li>Valós idejű interakció</li><li>Tudásbázis</li><li>Rugalmasság és alkalmazkodóképesség az ügyfél igényeihez.</li></ul>
+        <h3>Help Desk támogatás</h3>
+        <ul><li>Problémák megoldása e-mailben, telefonon vagy csevegésben jelzett problémák esetén</li><li>Távoli beavatkozások</li></ul>
+      </div>
+    `
+  };
+
+  function switchService(serviceId) {
+    const contentArea = document.getElementById('serviceContent');
+    if (servicesData[serviceId]) {
+      contentArea.innerHTML = servicesData[serviceId];
+    }
+    document.querySelectorAll('.service-menu-item').forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('data-service') === serviceId) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  document.querySelectorAll('.service-menu-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const service = item.getAttribute('data-service');
+      switchService(service);
+      history.pushState(null, null, '#' + service);
+    });
+  });
+
+  const hash = window.location.hash.substring(1);
+  if (hash && servicesData[hash]) {
+    switchService(hash);
+  } else {
+    switchService('cctv');
+  }
+
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.substring(1);
+    if (newHash && servicesData[newHash]) {
+      switchService(newHash);
+    }
+  });
+</script>
+</body>
+</html>

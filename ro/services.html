@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – Servicii IT Complete | Hardware, Rețele, Supraveghere</title>
+  <meta name="description" content="Levobit oferă servicii IT profesionale: întreținere calculatoare, baze de date, backup, rețele structurate, VoIP, software personalizat, helpdesk, plus supraveghere video, control acces și sisteme de alarmă.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Acasă</a></li>
+        <li><a href="services.html" class="active">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/services.html" class="lang-option">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
+                    <span class="lang-label">English</span>
+                </span>
+            </a>
+            <a href="../hu/services.html" class="lang-option">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
+                    <span class="lang-label">Magyar</span>
+                </span>
+            </a>
+            <a href="services.html" class="lang-option active">
+                <span class="lang-option-content">
+                    <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+                    <span class="lang-label">Română</span>
+                </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Soluții IT & Securitate Complete</div>
+      <h1 class="hero-title">Serviciile <span class="hero-title-gradient">noastre</span></h1>
+      <p class="hero-subtitle">De la întreținere calculatoare și rețele structurate până la supraveghere avansată și control acces – acoperim toate nevoile tehnologice.</p>
+      <div class="hero-buttons"><a href="#services-main" class="btn btn-primary">Explorează serviciile →</a><a href="contact.html" class="btn btn-outline">Solicită o ofertă</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Cine suntem</span>
+        <h2 class="section-title">Expertiză Hardware, Software & Securitate</h2>
+        <p class="section-subtitle">LevoBit este o firmă de consultanță IT cu suport tehnic hardware și software, service, execuție și administrare rețele informatice, precum și dezvoltare software personalizată. Bazată pe profesionalism, compania noastră derulează proiecte cu companii private, școli, instituții publice și oferă soluții complete de securitate fizică.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services-main" style="padding-top: 0;">
+    <div class="container">
+      <div class="services-layout">
+        <div class="services-sidebar" id="servicesMenu">
+          <div class="service-menu-item active" data-service="cctv">🎥 Supraveghere Video CCTV</div>
+          <div class="service-menu-item" data-service="access">🛡️ Control Acces & Alarmă</div>
+          <div class="service-menu-item" data-service="itsecurity">🔒 Securitate IT & Antivirus</div>
+          <div class="service-menu-item" data-service="admin">💻 Administrare & Întreținere PC</div>
+          <div class="service-menu-item" data-service="database">🗄️ Administrare Baze de Date</div>
+          <div class="service-menu-item" data-service="backup">☁️ Backup Offsite & DR</div>
+          <div class="service-menu-item" data-service="networks">🔌 Rețele Structurate & Cablare</div>
+          <div class="service-menu-item" data-service="pbx">📞 Sisteme PBX & VoIP</div>
+          <div class="service-menu-item" data-service="software">⚙️ Dezvoltare Software Personalizat</div>
+          <div class="service-menu-item" data-service="helpdesk">🎧 Helpdesk & Asistență la Distanță</div>
+        </div>
+        <div class="services-content" id="serviceContent">
+          <div class="service-detail">
+            <h3>Supraveghere Video (CCTV)</h3>
+            <p>Furnizăm și instalăm sisteme profesionale de supraveghere video pentru monitorizare completă a securității.</p>
+            <ul><li>Camere analog HD și IP (opțiuni 4MP, 4K)</li><li>Vizualizare la distanță prin smartphone sau PC</li><li>Detectare inteligentă a mișcării, vedere nocturnă, înregistrare pe NVR/DVR</li><li>Soluții pentru birouri, depozite, magazine și clădiri publice</li><li>Întreținere și asistență completă</li></ul>
+            <p>Experții noștri proiectează amplasarea optimă a camerelor pentru a acoperi zonele critice și pentru integrarea cu sistemele de control acces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section section">
+    <div class="container about-grid">
+      <div>
+        <h2 class="about-content-title">De ce companiile au încredere în Levobit</h2>
+        <p class="about-content-text">Combinăm expertiza tehnică profundă cu o abordare proactivă, centrată pe client. De la infrastructura IT la sistemele de securitate fizică, echipa noastră oferă soluții robuste, pregătite pentru viitor, care cresc eficiența și siguranța.</p>
+        <div class="about-checklist">
+          <div class="about-check"><span class="about-check-icon">✓</span> Peste 14 ani experiență</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Ingineri certificați & experți în securitate</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Asistență de urgență 24/7</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Contracte de service personalizate</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Solicită o consultație gratuită</a>
+      </div>
+      <div class="about-image-wrapper">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Echipa Levobit" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container hero-stats">
+      <div class="hero-stat"><div class="hero-stat-number" data-count="1000">0</div><div class="hero-stat-label">Proiecte livrate</div></div>
+      <div class="hero-stat"><div class="hero-stat-number" data-count="14">0</div><div class="hero-stat-label">Ani de expertiză</div></div>
+      <div class="hero-stat"><div class="hero-stat-number procent" data-count="98">0</div><div class="hero-stat-label">Retenție clienți</div></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Ești gata să modernizezi infrastructura IT și de securitate?</h2>
+      <p class="cta-text">Contactează-ne astăzi pentru o consultație fără obligații.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-white">Contactează-ne acum</a>
+        <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
+        <p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și software personalizat.</p>
+        <div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Servicii</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#cctv">Supraveghere</a></li>
+          <li><a href="services.html#access">Control acces</a></li>
+          <li><a href="networks.html">Rețele LAN</a></li>
+          <li><a href="services.html#helpdesk">Suport IT</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Companie</h4>
+        <ul class="footer-links">
+          <li><a href="customers.html">Clienți</a></li>
+          <li><a href="news.html">Noutăți</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
+          <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
+          <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Acasă</a>
+    <a href="services.html" class="mobile-nav-link active">Servicii</a>
+    <a href="networks.html" class="mobile-nav-link">Rețele LAN</a>
+    <a href="customers.html" class="mobile-nav-link">Clienți</a>
+    <a href="news.html" class="mobile-nav-link">Noutăți</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </div>
+  <div class="mobile-lang-switcher">
+    <a href="../en/services.html" class="mobile-lang-option">🇬🇧 English</a>
+    <a href="../hu/services.html" class="mobile-lang-option">🇭🇺 Magyar</a>
+    <a href="services.html" class="mobile-lang-option active">🇷🇴 Română</a>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  const servicesData = {
+    cctv: `
+      <div class="service-detail">
+        <h3>Supraveghere Video (CCTV)</h3>
+        <p>Furnizăm și instalăm sisteme profesionale de supraveghere video pentru monitorizare completă a securității.</p>
+        <ul><li>Camere analog HD și IP (opțiuni 4MP, 4K)</li><li>Vizualizare la distanță prin smartphone sau PC</li><li>Detectare inteligentă a mișcării, vedere nocturnă, înregistrare pe NVR/DVR</li><li>Soluții pentru birouri, depozite, magazine și clădiri publice</li><li>Întreținere și asistență completă</li></ul>
+        <p>Experții noștri proiectează amplasarea optimă a camerelor pentru a acoperi zonele critice și pentru integrarea cu sistemele de control acces.</p>
+      </div>
+    `,
+    access: `
+      <div class="service-detail">
+        <h3>Sisteme Control Acces & Alarmă</h3>
+        <p>Protejați-vă sediul cu soluții moderne de securitate:</p>
+        <ul><li>Control acces: biometric (amprentă, recunoaștere facială), card RFID, tastatură sau credențiale mobile</li><li>Detectare intruziune: contacte magnetice, senzori de mișcare, detectoare spargere sticlă</li><li>Sisteme anti‑efracție și alarmă împotriva hoților</li><li>Integrare detectare incendiu și fum</li><li>Software de management centralizat cu alerte în timp real</li><li>Opțiune de monitorizare 24/7 și contracte de întreținere</li></ul>
+        <p>Evaluăm nevoile dumneavoastră și instalăm sisteme scalabile.</p>
+      </div>
+    `,
+    itsecurity: `
+      <div class="service-detail">
+        <h3>Securitate IT & Antivirus</h3>
+        <p>Protejați-vă activele digitale cu securitate cibernetică de nivel enterprise:</p>
+        <ul><li>Antivirus / EDR pentru toate stațiile de lucru și servere</li><li>Configurare și gestionare firewall de ultimă generație</li><li>Evaluări vulnerabilități și teste de penetrare</li><li>Securitate e-mail, anti-spam, anti-phishing</li><li>Criptare date și securitate backup</li><li>Audituri de securitate și asistență pentru conformitatea GDPR</li></ul>
+      </div>
+    `,
+    admin: `
+      <div class="service-detail">
+        <h3>Administrare și întreținere calculatoare</h3>
+        <ul><li>Instalare și configurare sisteme software/hardware</li><li>Întreținere preventivă periodică a echipamentelor</li><li>Service la sediul clientului</li></ul>
+        <img src="../img/service_laptop.jpg" alt="Servicii laptop" style="max-width:100%; margin:20px 0; border-radius:var(--radius); box-shadow:var(--shadow);">
+        <h3>Administrarea și întreținerea echipamentelor periferice</h3>
+        <ul><li>Instalare și configurare echipamente (imprimante, multifuncționale, scanere, proiectoare etc.)</li><li>Întreținere preventivă și achiziție consumabile</li><li>Service la sediul clientului</li></ul>
+        <h3>Gestionarea și întreținerea rețelei</h3>
+        <ul><li>Administrarea și întreținerea serverelor și echipamentelor de rețea</li><li>Optimizarea conexiunii la Internet</li><li>Proiectare, configurare și execuție rețele</li></ul>
+      </div>
+    `,
+    database: `
+      <div class="service-detail">
+        <h3>Administrare baze de date</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>Aplicațiile de baze de date sunt astăzi cele mai importante aplicații de afaceri. Indiferent dacă folosiți Oracle, Firebird, SQL Server, Paradox sau alte baze de date, gestionarea și întreținerea lor este o necesitate critică. Serviciile noastre includ:</p>
+            <ul><li>Gestionarea bazelor de date multiple</li><li>Tratarea proactivă a problemelor de performanță și disponibilitate</li><li>Rezolvarea problemelor prin analiza și optimizarea SQL</li><li>Replicarea sistemelor critice de baze de date pentru a asigura disponibilitatea și a minimiza pierderile de date</li></ul>
+          </div>
+          <img src="../img/instalare_rack_1.jpg" alt="Instalare rack server" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    backup: `
+      <div class="service-detail">
+        <h3>Servicii backup offsite</h3>
+        <p>Backup Offsite – Protecție completă și complexă a informațiilor și aplicațiilor</p>
+        <ul><li>Sunt datele și aplicațiile companiei dumneavoastră protejate împotriva erorilor utilizatorilor, defecțiunilor hardware, ștergerii accidentale a fișierelor și posibilelor atacuri?</li><li>Informațiile pierdute vor fi greu sau imposibil de recuperat dacă nu sunt stocate în altă locație. LevoBit analizează cerințele dumneavoastră și propune soluții de backup offsite personalizate.</li><li>Beneficii: Acces rapid la informațiile salvate, intervale de backup garantate, toate elementele vitale păstrate în siguranță.</li><li>Caracteristici: Gestionare constantă a informațiilor procesate, stocare pe mașini performante, servicii suplimentare de securitate a informațiilor.</li></ul>
+      </div>
+    `,
+    networks: `
+      <div class="service-detail">
+        <h3>Rețele structurate</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>Rețelele structurate sunt modul de cablare în care toate prizele voce / date sunt conectate la un panou de patch central, de unde se poate determina exact cum vor fi utilizate aceste conexiuni. Fiecare priză poate fi conectată (prin panoul de patch) la un switch de rețea sau la un panou de punte către un telefon PBX.</p>
+            <p>Cablarea structurată are următoarele subsisteme: Intrare, dulap de telecomunicații, backbone, cablare orizontală, componente ale zonei de lucru. Avantaj major: mai ușor de întreținut și depanat, flexibil și durabil. Compania noastră realizează concepția, proiectarea și cablarea pentru rețele voce-date structurate prin cat. 5 și cat. 6-a.</p>
+          </div>
+          <img src="../img/cablare-structurata.jpg" alt="Cablare structurată" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    pbx: `
+      <div class="service-detail">
+        <h3>Sisteme telefonice PBX</h3>
+        <p>PBX (Private Branch Exchange) este o rețea privată utilizată în cadrul unei companii. Utilizatorii telefoniei PBX partajează un număr de linii externe pentru a efectua apeluri telefonice externe. Un sistem PBX conectează liniile telefonice interne dintr-o companie și, de asemenea, le conectează la rețeaua telefonică publică (PSTN). Una dintre cele mai noi tendințe în dezvoltarea sistemelor PBX este PBX VoIP, cunoscut și sub numele de IP PBX, care utilizează protocolul Internet pentru a transmite apelurile.</p>
+      </div>
+    `,
+    software: `
+      <div class="service-detail">
+        <h3>Software personalizat</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
+          <div>
+            <p>Marii dezvoltatori de software au creat produse care acoperă o gamă largă de nevoi, dar nu toate se potrivesc perfect. LevoBit vine cu soluții software scalabile combinate cu tehnologii hardware care se îmbină în fluxurile de lucru din partea clientului și creează o aplicație software care răspunde exact nevoilor clientului.</p>
+            <p>Etapele de execuție a proiectului, software personalizat, sunt:</p>
+            <ul><li>colectarea și analiza cerințelor clientului</li><li>pregătirea specificațiilor proiectului împreună cu beneficiarul</li><li>semnarea contractului conform proiectului</li><li>dezvoltarea software pe baza specificațiilor</li><li>livrarea sistemului / software-ului realizat și testat</li><li>instalarea, testarea finală și depanarea</li><li>prezentarea soluției pentru ușurința în utilizare</li></ul>
+          </div>
+          <img src="../img/software_la_comanda.jpg" alt="Dezvoltare software personalizat" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
+        </div>
+      </div>
+    `,
+    helpdesk: `
+      <div class="service-detail">
+        <h3>Ajutor online și Helpdesk</h3>
+        <img src="../img/helpdesk.jpg" alt="Asistență helpdesk" style="max-width:100%; margin:20px 0; border-radius:var(--radius);">
+        <p>Oferim servicii helpdesk IT pentru toate sarcinile de birou: instalări software, configurare dispozitive, setări e-mail și multe altele. Helpdesk-ul este un instrument esențial pentru afacerea dumneavoastră pentru a elimina problemele care pot afecta productivitatea.</p>
+        <h3>Avantajele Helpdesk-ului</h3>
+        <ul><li>Servicii de asistență și intervenție online</li><li>Un singur punct de contact</li><li>Interacțiune în timp real</li><li>Bază de cunoștințe</li><li>Flexibilitate și adaptabilitate la nevoile clientului.</li></ul>
+        <h3>Asistență Help Desk</h3>
+        <ul><li>Depanarea problemelor semnalate prin e-mail, telefon sau chat</li><li>Intervenții la distanță</li></ul>
+      </div>
+    `
+  };
+
+  function switchService(serviceId) {
+    const contentArea = document.getElementById('serviceContent');
+    if (servicesData[serviceId]) {
+      contentArea.innerHTML = servicesData[serviceId];
+    }
+    document.querySelectorAll('.service-menu-item').forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('data-service') === serviceId) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  document.querySelectorAll('.service-menu-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const service = item.getAttribute('data-service');
+      switchService(service);
+      history.pushState(null, null, '#' + service);
+    });
+  });
+
+  const hash = window.location.hash.substring(1);
+  if (hash && servicesData[hash]) {
+    switchService(hash);
+  } else {
+    switchService('cctv');
+  }
+
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.substring(1);
+    if (newHash && servicesData[newHash]) {
+      switchService(newHash);
+    }
+  });
+</script>
+</body>
+</html>

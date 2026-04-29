@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  
 </head>
 <body>
 
@@ -21,7 +20,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="networks.html">LAN Networks</a></li>
-        <li><a href="customers.html">Customers</a></li>
+        <li><a href="customers.html">customers</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="lang-switcher">
@@ -31,19 +30,19 @@
             <span class="lang-caret">▾</span>
           </div>
           <div class="lang-dropdown" id="langDropdown">
-            <a href="../ro/index.html" class="lang-option">
+            <a href="../ro/services.html" class="lang-option">
                 <span class="lang-option-content">
                     <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
                     <span class="lang-label">Română</span>
                 </span>
             </a>
-            <a href="../hu/index.html" class="lang-option">
+            <a href="../hu/services.html" class="lang-option">
                 <span class="lang-option-content">
                     <span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span>
                     <span class="lang-label">Magyar</span>
                 </span>
             </a>
-            <a href="../en/index.html" class="lang-option active">
+            <a href="services.html" class="lang-option active">
                 <span class="lang-option-content">
                     <span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span>
                     <span class="lang-label">English</span>
@@ -61,6 +60,14 @@
   <!-- Hero Section -->
   <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
     <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
     <div class="container hero-content" style="max-width: 800px;">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Complete IT & Security Solutions</div>
       <h1 class="hero-title">Our <span class="hero-title-gradient">Services</span></h1>
@@ -84,7 +91,6 @@
   <section class="section" id="services-main" style="padding-top: 0;">
     <div class="container">
       <div class="services-layout">
-        <!-- Left Sidebar Menu -->
         <div class="services-sidebar" id="servicesMenu">
           <div class="service-menu-item active" data-service="cctv">🎥 Video Surveillance CCTV</div>
           <div class="service-menu-item" data-service="access">🛡️ Access Control & Alarms</div>
@@ -96,12 +102,8 @@
           <div class="service-menu-item" data-service="pbx">📞 PBX & VoIP Systems</div>
           <div class="service-menu-item" data-service="software">⚙️ Custom Software Development</div>
           <div class="service-menu-item" data-service="helpdesk">🎧 Helpdesk & Remote Support</div>
-          
         </div>
-
-        <!-- Right Content Area (dynamic) -->
         <div class="services-content" id="serviceContent">
-          <!-- Default content (CCTV) will be loaded via JS, but i include it inline for initial load -->
           <div class="service-detail" id="cctv-content">
             <h3>Video Surveillance (CCTV)</h3>
             <p>We supply and install professional video surveillance systems for complete security monitoring.</p>
@@ -126,112 +128,93 @@
         <h2 class="about-content-title">Why businesses trust Levobit</h2>
         <p class="about-content-text">We combine deep technical expertise with a proactive, client‑focused approach. From IT infrastructure to physical security systems, our team delivers robust, future‑proof solutions that drive efficiency and safety.</p>
         <div class="about-checklist">
-            <div class="about-check">
-                <span class="about-check-icon">✓</span> 14+ years experience</div>
-                <div class="about-check">
-                    <span class="about-check-icon">✓</span> Certified engineers & security experts</div>
-                    <div class="about-check">
-                        <span class="about-check-icon">✓</span> 24/7 emergency support</div>
-                    <div class="about-check">
-                        <span class="about-check-icon">✓</span> Tailored service agreements</div>
-                    </div>
+          <div class="about-check"><span class="about-check-icon">✓</span> 14+ years experience</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Certified engineers & security experts</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> 24/7 emergency support</div>
+          <div class="about-check"><span class="about-check-icon">✓</span> Tailored service agreements</div>
+        </div>
         <a href="contact.html" class="btn btn-primary">Get a free consultation</a>
       </div>
       <div class="about-image-wrapper">
-        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit team" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;"></div>
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit team" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;">
+      </div>
     </div>
   </section>
 
-   <!-- Stats -->
+  <!-- Stats -->
   <section class="section" style="padding-top:0">
     <div class="container hero-stats">
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="1000">0</div>
-            <div class="hero-stat-label">Projects delivered</div>
-        </div>
-        <!-- <div class="hero-stat">
-            <div class="hero-stat-number" data-count="320">0</div>
-            <div class="hero-stat-label">Happy clients</div>
-        </div> -->
-        <div class="hero-stat">
-            <div class="hero-stat-number" data-count="14">0</div>
-            <div class="hero-stat-label">Years expertise</div>
-        </div>
-        <div class="hero-stat">
-            <div class="hero-stat-number procent" data-count="98">0</div>
-            <div class="hero-stat-label">Client retention</div>
-        </div>
+      <div class="hero-stat"><div class="hero-stat-number" data-count="1000">0</div><div class="hero-stat-label">Projects delivered</div></div>
+      <div class="hero-stat"><div class="hero-stat-number" data-count="14">0</div><div class="hero-stat-label">Years expertise</div></div>
+      <div class="hero-stat"><div class="hero-stat-number procent" data-count="98">0</div><div class="hero-stat-label">Client retention</div></div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
     <div class="container cta-content">
-        <h2 class="cta-title">Ready to upgrade your IT and security infrastructure?</h2>
-        <p class="cta-text">Contact us today for a no‑obligation consultation.</p>
-        <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-white">Contact us now</a>
-            <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a></div></div></section>
+      <h2 class="cta-title">Ready to upgrade your IT and security infrastructure?</h2>
+      <p class="cta-text">Contact us today for a no‑obligation consultation.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-white">Contact us now</a>
+        <a href="tel:+40374444040" class="btn btn-outline">📞 +40 374 444 040</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
-                <p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and custom software.</p>
-                <div class="footer-social">
-
-                     <a href="#" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a>
-          
-                </div>
-            </div>
-            <div>
-                <h4 class="footer-heading">Services</h4>
-                <ul class="footer-links">
-                    <li><a href="services.html#surveillance">Surveillance</a></li>
-                    <li><a href="services.html#access">Access Control</a></li>
-                    <li><a href="networks.html">LAN Networks</a></li>
-                    <li><a href="services.html#support">IT Support</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Company</h4>
-                <ul class="footer-links">
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-heading">Contact</h4>
-                <ul class="footer-links">
-                <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
-                <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
-                <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Levobit — All rights reserved.</p>
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo">
+        <p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and custom software.</p>
+        <div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#cctv">Surveillance</a></li>
+          <li><a href="services.html#access">Access Control</a></li>
+          <li><a href="networks.html">LAN Networks</a></li>
+          <li><a href="services.html#helpdesk">IT Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li>
+          <li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li>
+          <li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — All rights reserved.</p></div>
+  </div>
 </footer>
 
 <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-nav">
-        <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="services.html" class="mobile-nav-link active">Services</a>
-        <a href="networks.html" class="mobile-nav-link">LAN Networks</a>
-        <a href="customers.html" class="mobile-nav-link">Customers</a>
-        <a href="news.html" class="mobile-nav-link">News</a>
-        <a href="contact.html" class="mobile-nav-link">Contact</a>
-    </div>
-    <div class="mobile-lang-switcher">
-        <a href="../ro/servicii.html" class="mobile-lang-option">🇷🇴 Română</a>
-        <a href="../hu/szolgaltatasok.html" class="mobile-lang-option">🇭🇺 Magyar</a>
-        <a href="../en/services.html" class="mobile-lang-option active">🇬🇧 English</a>
-    </div>
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="services.html" class="mobile-nav-link active">Services</a>
+    <a href="networks.html" class="mobile-nav-link">LAN Networks</a>
+    <a href="customers.html" class="mobile-nav-link">customers</a>
+    <a href="news.html" class="mobile-nav-link">News</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </div>
+  <div class="mobile-lang-switcher">
+    <a href="../ro/services.html" class="mobile-lang-option">🇷🇴 Română</a>
+    <a href="../hu/services.html" class="mobile-lang-option">🇭🇺 Magyar</a>
+    <a href="services.html" class="mobile-lang-option active">🇬🇧 English</a>
+  </div>
 </div>
 
 <script src="../js/main.js"></script>
@@ -240,7 +223,7 @@
   const servicesData = {
     cctv: `
       <div class="service-detail">
-        <h3>Video Surveillance CCTV</h3>
+        <h3>Video Surveillance (CCTV)</h3>
         <p>We supply and install professional video surveillance systems for complete security monitoring.</p>
         <ul style="list-style-type: disc; margin-left: 20px;">
           <li>Analog HD and IP cameras (4MP, 4K options)</li>
@@ -268,41 +251,25 @@
       </div>
     `,
     itsecurity: `
-      <div class="service-detail" style="list-style-type: disc;">
+      <div class="service-detail">
         <h3>IT Security & Antivirus</h3>
         <p>Protect your digital assets with enterprise‑grade cybersecurity:</p>
-        <ul style="list-style-type: disc; margin-left: 30px;">
-          <li>Antivirus / EDR (Endpoint Detection and Response) for all workstations and servers</li>
-          <li>Next‑generation firewall configuration and management</li>
-          <li>Vulnerability assessments and penetration testing</li>
-          <li>Email security, anti‑spam, anti‑phishing</li>
-          <li>Data encryption and backup security</li>
-          <li>Security audits and GDPR compliance assistance</li>
-        </ul>
+        <ul><li>Antivirus / EDR (Endpoint Detection and Response) for all workstations and servers</li><li>Next‑generation firewall configuration and management</li><li>Vulnerability assessments and penetration testing</li><li>Email security, anti‑spam, anti‑phishing</li><li>Data encryption and backup security</li><li>Security audits and GDPR compliance assistance</li></ul>
       </div>
     `,
-    
     admin: `
-      <div class="service-detail" style="list-style-type: disc; margin-left: 30px;">
-        <h3 style="margin-left: 10px;">Computer administration and maintenance</h3>
+      <div class="service-detail">
+        <h3>Computer administration and maintenance</h3>
         <ul style="list-style-type: disc; margin-left: 30px;">
-            <li>Install and configure software / hardware computing systems</li>
-            <li>Periodic preventive maintenance of equipment</li>
-            <li>Service at the customer's premises</li>
-        </ul>
-        <img src="../img/service_laptop.jpg" alt="Laptop service" style="max-width:100%; margin:20px 0; border-radius:var(--radius); box-shadow:var(--shadow);">
-        <h3 style="margin-left: 10px;">Administration and maintenance of peripheral equipment</h3>
-        <ul style="list-style-type: disc; margin-left: 30px;">
-          <li>Installation and configuration of equipment (printers, multifunction, scanners, projectors, etc.)</li>
-          <li>Preventive maintenance and purchase of consumables</li>
+          <li>Install and configure software / hardware computing systems</li>
+          <li>Periodic preventive maintenance of equipment</li>
           <li>Service at the customer's premises</li>
         </ul>
-        <h3 style="margin-left: 10px;">Managing and maintaining the network</h3>
-        <ul style="list-style-type: disc; margin-left: 30px;">
-          <li>Administration and maintenance of servers and network equipment</li>
-          <li>Optimizing your Internet connection</li>
-          <li>Design, configuration and execution of networks</li>
-        </ul>
+        <img src="../img/service_laptop.jpg" alt="Laptop service" style="max-width:100%; margin:20px 0; border-radius:var(--radius); box-shadow:var(--shadow);">
+        <h3>Administration and maintenance of peripheral equipment</h3>
+        <ul><li>Installation and configuration of equipment (printers, multifunction, scanners, projectors, etc.)</li><li>Preventive maintenance and purchase of consumables</li><li>Service at the customer's premises</li></ul>
+        <h3>Managing and maintaining the network</h3>
+        <ul><li>Administration and maintenance of servers and network equipment</li><li>Optimizing your Internet connection</li><li>Design, configuration and execution of networks</li></ul>
       </div>
     `,
     database: `
@@ -311,12 +278,7 @@
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:24px; align-items:start; margin-top: 12px;">
           <div>
             <p>Database applications are today the most important business applications. Even if you run Oracle, Firebird, SQL Server, Paradox, or other databases, managing and maintaining them is a critical necessity. Our services include:</p>
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>Managing Multiple Databases</li>
-              <li>Proactive handling of performance and availability issues</li>
-              <li>Solve problems by analyzing and optimizing SQL</li>
-              <li>Replication of critical database systems to ensure availability and to minimize possible loss of data</li>
-            </ul>
+            <ul><li>Managing Multiple Databases</li><li>Proactive handling of performance and availability issues</li><li>Solve problems by analyzing and optimizing SQL</li><li>Replication of critical database systems to ensure availability and to minimize possible loss of data</li></ul>
           </div>
           <img src="../img/instalare_rack_1.jpg" alt="Server rack installation" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
         </div>
@@ -354,15 +316,7 @@
           <div>
             <p>Large software developers have created products that cover a broad range of needs, but not all of them fit perfectly. LevoBit comes with scalable software solutions combined with hardware technologies that blend into client-side workflows and create a software application that exactly meets customer needs.</p>
             <p>The stages of project execution, custom software, are:</p>
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>collecting and analyzing customer requirements</li>
-              <li>preparation of project specifications together with the beneficiary</li>
-              <li>signing the contract according to the project</li>
-              <li>Software development based on specifications</li>
-              <li>delivery of the system / software made and tested</li>
-              <li>installation, final testing and troubleshooting</li>
-              <li>presenting the solution for ease of use</li>
-            </ul>
+            <ul><li>collecting and analyzing customer requirements</li><li>preparation of project specifications together with the beneficiary</li><li>signing the contract according to the project</li><li>Software development based on specifications</li><li>delivery of the system / software made and tested</li><li>installation, final testing and troubleshooting</li><li>presenting the solution for ease of use</li></ul>
           </div>
           <img src="../img/software_la_comanda.jpg" alt="Custom software development" style="width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover;">
         </div>
@@ -378,52 +332,14 @@
         <h3>Help Desk support</h3>
         <ul><li>Troubleshoot issues alerted by email, phone, or chat</li><li>Remote interventions</li></ul>
       </div>
-    `,
-    cctv: `
-      <div class="service-detail">
-        <h3>Video Surveillance (CCTV)</h3>
-        <p>We supply and install professional video surveillance systems for complete security monitoring.</p>
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>Analog HD and IP cameras (4MP, 4K options)</li>
-          <li>Remote viewing via smartphone or PC</li>
-          <li>Intelligent motion detection, night vision, and recording on NVR/DVR</li>
-          <li>Solutions for offices, warehouses, shops, and public buildings</li>
-          <li>Full maintenance and support</li>
-        </ul>
-        <p>Our experts design the optimal camera placement to cover critical areas and integrate with access control systems.</p>
-      </div>
-    `,
-    access: `
-      <div class="service-detail">
-        <h3>Access Control & Alarm Systems</h3>
-        <p>Protect your premises with modern security solutions:</p>
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>Access control: biometric (fingerprint, facial recognition), RFID card, keypad, or mobile credentials</li>
-          <li>Intrusion detection: magnetic contacts, motion sensors, glass-break detectors</li>
-          <li>Anti‑theft & burglar alarm systems</li>
-          <li>Fire and smoke detection integration</li>
-          <li>Centralised management software with real‑time alerts</li>
-          <li>24/7 monitoring option and maintenance contracts</li>
-        </ul>
-        <p>We assess your needs and install scalable systems.</p>
-      </div>
-    `,
-    itsecurity: `
-      <div class="service-detail">
-        <h3>IT Security & Antivirus</h3>
-        <p>Protect your digital assets with enterprise‑grade cybersecurity:</p>
-        <ul><li>Antivirus / EDR (Endpoint Detection and Response) for all workstations and servers</li><li>Next‑generation firewall configuration and management</li><li>Vulnerability assessments and penetration testing</li><li>Email security, anti‑spam, anti‑phishing</li><li>Data encryption and backup security</li><li>Security audits and GDPR compliance assistance</li></ul>
-      </div>
     `
   };
 
-  // Function to switch content
   function switchService(serviceId) {
     const contentArea = document.getElementById('serviceContent');
     if (servicesData[serviceId]) {
       contentArea.innerHTML = servicesData[serviceId];
     }
-    // Update active class on menu items
     document.querySelectorAll('.service-menu-item').forEach(item => {
       item.classList.remove('active');
       if (item.getAttribute('data-service') === serviceId) {
@@ -432,18 +348,30 @@
     });
   }
 
-  // Add click handlers to menu items
   document.querySelectorAll('.service-menu-item').forEach(item => {
     item.addEventListener('click', () => {
       const service = item.getAttribute('data-service');
       switchService(service);
+      // Update URL hash without reloading
+      history.pushState(null, null, '#' + service);
     });
   });
 
-  // Ensure CCTV is the default service on page load
-  switchService('cctv');
+  // Handle initial load based on hash
+  const hash = window.location.hash.substring(1);
+  if (hash && servicesData[hash]) {
+    switchService(hash);
+  } else {
+    switchService('cctv');
+  }
 
- 
+  // Listen to hash changes (if user clicks back/forward)
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.substring(1);
+    if (newHash && servicesData[newHash]) {
+      switchService(newHash);
+    }
+  });
 </script>
 </body>
 </html>

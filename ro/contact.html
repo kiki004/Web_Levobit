@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levobit – Contactați experții IT</title>
+  <meta name="description" content="Contactați Levobit pentru consultanță IT, soluții de rețea, supraveghere și asistență. Sunați, trimiteți e-mail sau folosiți formularul de contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+    .contact-info-card { background: var(--bg-white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow); margin-bottom: 32px; }
+    .contact-info-card h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--primary); }
+    .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: var(--text-light); }
+    .contact-detail-icon { width: 40px; height: 40px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--accent); }
+    .contact-detail a { color: var(--accent); font-weight: 500; }
+    .map { border-radius: var(--radius-lg); overflow: hidden; margin-top: 24px; }
+    .contact-form { background: var(--bg-white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); transition: var(--transition); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    .submit-btn { background: var(--accent); color: white; padding: 12px 28px; border: none; border-radius: var(--radius); font-weight: 600; cursor: pointer; width: 100%; }
+    .submit-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; }
+    .modal-content { background: white; max-width: 400px; padding: 32px; border-radius: var(--radius-lg); text-align: center; animation: fadeInUp 0.3s; }
+    .modal-content h3 { margin-bottom: 12px; }
+    .modal-content p { margin-bottom: 24px; color: var(--text-light); }
+    .modal-content button { background: var(--accent); color: white; border: none; padding: 10px 24px; border-radius: var(--radius); cursor: pointer; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Acasă</a></li>
+        <li><a href="services.html">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/contact.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/contact.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="contact.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    </div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Contactați-ne</div>
+      <h1 class="hero-title">Să vorbim despre <span class="hero-title-gradient">proiectul dvs.</span></h1>
+      <p class="hero-subtitle">Sunați-ne pentru o consultație gratuită, asistență tehnică sau orice nevoie IT.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Suntem aici să vă ajutăm</h2>
+        <p class="section-subtitle">Vizitați unul dintre birourile noastre, sunați-ne sau trimiteți un mesaj folosind formularul.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-card">
+            <h3>📍 Brașov (Sediul central)</h3>
+            <div class="contact-detail"><div class="contact-detail-icon">🏢</div><div>Strada Hortensiei 32, Brașov 500376</div></div>
+            <div class="contact-detail"><div class="contact-detail-icon">📞</div><div><a href="tel:+40724381071">(+40) 724 381 071</a></div></div>
+            <div class="contact-detail"><div class="contact-detail-icon">✉️</div><div><a href="mailto:office@levobit.ro">office@levobit.ro</a></div></div>
+            <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.391962482781!2d25.6307191765878!3d45.65239377507358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35c6f07df56eb%3A0xa74b8f2e9a04f779!2sStrada+Hortensiei+32%2C+Bra%C8%99ov!5e0!3m2!1sen!2sro!4v1548335656666" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen loading="lazy"></iframe></div>
+          </div>
+          <div class="contact-info-card">
+            <h3>📍 Miercurea‑Ciuc (Birou & Suport)</h3>
+            <div class="contact-detail"><div class="contact-detail-icon">🏢</div><div>Strada Harghita 46, Miercurea‑Ciuc 530154</div></div>
+            <div class="contact-detail"><div class="contact-detail-icon">📞</div><div><a href="tel:+40743759848">(+40) 743 759 848</a></div></div>
+            <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11013.218003836151!2d25.7919006!3d46.3633463!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15859bd5b5137502!2sLevobit!5e0!3m2!1sen!2sro!4v1548335371344" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen loading="lazy"></iframe></div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="margin-bottom: 24px;">Trimiteți-ne un mesaj</h3>
+          <form id="contactForm" method="POST" action="../send_contact.php">
+            <div class="form-group"><label for="name">Nume complet *</label><input type="text" id="name" name="name" required></div>
+            <div class="form-group"><label for="email">E-mail *</label><input type="email" id="email" name="email" required></div>
+            <div class="form-group"><label for="phone">Telefon</label><input type="tel" id="phone" name="phone"></div>
+            <div class="form-group"><label for="subject">Subiect *</label><input type="text" id="subject" name="subject" required></div>
+            <div class="form-group"><label for="message">Mesaj *</label><textarea id="message" name="message" rows="5" required></textarea></div>
+            <!-- Honeypot -->
+            <div style="display: none;"><label for="website">Website</label><input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></div>
+            <button type="submit" class="submit-btn">Trimite mesaj →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 class="cta-title">Căutați un partener IT de încredere?</h2>
+      <p class="cta-text">Vă vom răspunde în maxim 24 de ore.</p>
+      <div class="cta-buttons"><a href="tel:+40724381071" class="btn btn-white">Sunați-ne acum</a><a href="mailto:office@levobit.ro" class="btn btn-outline">E-mail direct</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links"><li><a href="services.html#surveillance">Supraveghere</a></li><li><a href="services.html#access">Control acces</a></li><li><a href="networks.html">Rețele LAN</a></li><li><a href="services.html#helpdesk">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="customers.html">Clienți</a></li><li><a href="news.html">Noutăți</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html">Acasă</a><a href="services.html">Servicii</a><a href="networks.html">Rețele LAN</a><a href="customers.html">Clienți</a><a href="news.html">Noutăți</a><a href="contact.html" class="active">Contact</a></div>
+  <div class="mobile-lang-switcher"><a href="../en/contact.html">🇬🇧 English</a><a href="../hu/contact.html">🇭🇺 Magyar</a><a href="contact.html" class="active">🇷🇴 Română</a></div>
+</div>
+
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <h3>📬</h3>
+    <p id="modalMessage"></p>
+    <button id="closeModal">OK</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  const form = document.getElementById('contactForm');
+  const modal = document.getElementById('successModal');
+  const modalMessage = document.getElementById('modalMessage');
+  const closeModal = document.getElementById('closeModal');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value !== '') {
+      modalMessage.innerText = '✓ Mesaj trimis cu succes! Vom reveni cât mai curând.';
+      modal.style.display = 'flex';
+      form.reset();
+      return;
+    }
+    const formData = new FormData(form);
+    try {
+      const response = await fetch('../send_contact.php', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      if (result.success) {
+        modalMessage.innerText = '✓ ' + result.message;
+        modal.style.display = 'flex';
+        form.reset();
+      } else {
+        modalMessage.innerText = '✗ ' + result.message;
+        modal.style.display = 'flex';
+      }
+    } catch (error) {
+      modalMessage.innerText = '✗ Eroare de rețea. Vă rugăm să ne trimiteți un e-mail direct sau să sunați.';
+      modal.style.display = 'flex';
+    }
+  });
+  closeModal.onclick = () => modal.style.display = 'none';
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+</script>
+</body>
+</html>
