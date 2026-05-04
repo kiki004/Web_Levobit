@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagină negăsită | Levobit</title>
+  <meta name="description" content="Pagina pe care o căutați nu există. Întoarceți-vă la Levobit – partenerul dvs. de încredere în domeniul IT din România.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="icon" type="image/png" href="../img/icon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../img/icon/favicon.svg" />
+  <link rel="shortcut icon" href="../img/icon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/icon/apple-touch-icon.png" />
+  <link rel="manifest" href="../img/icon/site.webmanifest" />
+
+  <style>
+    .error-number {
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent), var(--success));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+    .error-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .error-text {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      color: var(--text-light);
+    }
+    .error-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .error-number {
+        font-size: 5rem;
+      }
+      .error-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="services.html">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="../index.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 70vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    </div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Eroare 404</div>
+      <div class="error-number">404</div>
+      <h1 class="error-title">Pagină negăsită</h1>
+      <p class="error-text">Ne pare rău, pagina pe care o căutați nu există sau a fost mutată. Verificați adresa URL sau reveniți la pagina noastră principală.</p>
+      <div class="error-buttons">
+        <a href="../index.html" class="btn btn-primary">Înapoi la Acasă →</a>
+        <a href="contact.html" class="btn btn-outline">Contactați Suportul</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și dezvoltare e-commerce.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links"><li><a href="services.html#cctv">Supraveghere</a></li><li><a href="services.html#access">Control acces</a></li><li><a href="networks.html">Rețele LAN</a></li><li><a href="services.html#helpdesk">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="customers.html">Clienți</a></li><li><a href="news.html">Noutăți</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>©<script>document.write(new Date().getFullYear());</script> Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="index.html">Acasă</a><a href="services.html">Servicii</a><a href="networks.html">Rețele LAN</a><a href="customers.html">Clienți</a><a href="news.html">Noutăți</a><a href="contact.html">Contact</a></div>
+  <div class="mobile-lang-switcher">
+    <a href="../en/index.html" class="mobile-lang-option">🇬🇧 English</a>
+    <a href="../hu/index.html" class="mobile-lang-option">🇭🇺 Magyar</a>
+    <a href="../index.html" class="mobile-lang-option active">🇷🇴 Română</a>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

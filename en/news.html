@@ -3,34 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levobit – News & Updates</title>
-  <meta name="description" content="Stay updated with the latest news, announcements, and Facebook updates from Levobit.">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Levobit – News & Updates | Latest IT News and Announcements</title>
+  <meta name="description" content="Stay updated with the latest news, announcements, and Facebook updates from Levobit. Follow our activity, projects, and technology updates.">
+  <meta name="keywords" content="Levobit news, IT updates, company announcements, Facebook feed, technology news Romania">
+  <meta name="author" content="Levobit">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.levobit.ro/en/news.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="hu_HU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Levobit – News & Updates | Latest IT News">
+  <meta property="og:description" content="Stay updated with the latest news, announcements, and Facebook updates from Levobit. Follow our activity, projects, and technology updates.">
+  <meta property="og:url" content="https://www.levobit.ro/en/news.html">
+  <meta property="og:site_name" content="Levobit">
+  <meta property="og:image" content="https://www.levobit.ro/img/LOGO_LevoBit_Landscape-300x93.png">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="93">
+  <meta property="og:image:alt" content="Levobit Logo">
+  <meta property="article:publisher" content="https://www.facebook.com/levobit/">
+  
+  <!-- Alternate language versions (hreflang) - po tvoji shemi -->
+  <link rel="alternate" href="https://www.levobit.ro/news.html" hreflang="ro">
+  <link rel="alternate" href="https://www.levobit.ro/en/news.html" hreflang="en">
+  <link rel="alternate" href="https://www.levobit.ro/hu/news.html" hreflang="hu">
+  <link rel="alternate" href="https://www.levobit.ro/ro/news.html" hreflang="x-default">
+  
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-
+  
+  <!-- Favicon and Web App Manifest -->
   <link rel="icon" type="image/png" href="../img/icon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="../img/icon/favicon.svg" />
   <link rel="shortcut icon" href="../img/icon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../img/icon/apple-touch-icon.png" />
   <link rel="manifest" href="../img/icon/site.webmanifest" />
-
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.levobit.ro/#organization",
+        "name": "Levobit",
+        "alternateName": "Levobit - Professional IT Solutions",
+        "url": "https://www.levobit.ro/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://www.levobit.ro/#logo",
+          "url": "https://www.levobit.ro/img/LOGO_LevoBit_Landscape-300x93.png",
+          "width": 300,
+          "height": 93,
+          "caption": "Levobit Logo"
+        },
+        "image": { "@id": "https://www.levobit.ro/#logo" },
+        "sameAs": ["https://www.facebook.com/levobit/"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Hortensiei 32",
+          "addressLocality": "Brașov",
+          "postalCode": "500376",
+          "addressCountry": "RO"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.levobit.ro/#website",
+        "url": "https://www.levobit.ro/",
+        "name": "Levobit",
+        "description": "Professional IT solutions and consulting in Romania",
+        "publisher": { "@id": "https://www.levobit.ro/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.levobit.ro/en/news.html#webpage",
+        "url": "https://www.levobit.ro/en/news.html",
+        "name": "Levobit – News & Updates",
+        "isPartOf": { "@id": "https://www.levobit.ro/#website" },
+        "about": { "@id": "https://www.levobit.ro/#organization" },
+        "description": "Stay updated with the latest news, announcements, and Facebook updates from Levobit.",
+        "inLanguage": "en",
+        "breadcrumb": { "@id": "https://www.levobit.ro/en/news.html#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.levobit.ro/en/news.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.levobit.ro/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "News",
+            "item": "https://www.levobit.ro/en/news.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  
   <style>
     .hero-particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(59, 130, 246, 0.5);
-  border-radius: 50%;
-  animation: float 10s infinite;
-}
-
-  .hero-particle:nth-child(odd) {
-     top: random(100%); 
-     left: random(100%);
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(59, 130, 246, 0.5);
+      border-radius: 50%;
+      animation: float 10s infinite;
     }
-
+    /* Tvoja originalna koda za "random" ni veljavna v CSS – sem jo zakomentiral, pustil originalne pozicije iz drugih strani.
+       Če želiš naključne pozicije, uporabi JavaScript, vendar pusti tako kot je – delci se bodo prikazali na privzetih mestih. */
+    .hero-particle:nth-child(1) { top: 10%; left: 5%; }
+    .hero-particle:nth-child(2) { top: 70%; left: 15%; }
+    .hero-particle:nth-child(3) { top: 30%; left: 85%; }
+    .hero-particle:nth-child(4) { top: 80%; left: 75%; }
+    .hero-particle:nth-child(5) { top: 45%; left: 45%; }
+    .hero-particle:nth-child(6) { top: 15%; left: 65%; }
+    .hero-particle:nth-child(7) { top: 60%; left: 35%; }
+    .hero-particle:nth-child(8) { top: 85%; left: 55%; }
+    .hero-particle:nth-child(9) { top: 25%; left: 25%; }
+    .hero-particle:nth-child(10) { top: 50%; left: 95%; }
+    .hero-particle:nth-child(11) { top: 90%; left: 10%; }
+    .hero-particle:nth-child(12) { top: 5%; left: 50%; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+      25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+      50% { transform: translateY(-10px) translateX(-10px); opacity: 0.7; }
+      75% { transform: translateY(-30px) translateX(5px); opacity: 0.9; }
+    }
+    
+    .news-feed-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      overflow: hidden;
+    }
+    rssapp-carousel {
+      display: block;
+      width: 100%;
+    }
+    .rssapp-carousel .rssapp-carousel-slides,
+    .rssapp-carousel-slides {
+      display: grid !important;
+      grid-template-columns: repeat(1, 1fr) !important;
+      gap: 20px;
+      transition: none !important;
+    }
+    .rssapp-carousel .rssapp-carousel-slide,
+    .rssapp-carousel-slide {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    @media (min-width: 768px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .rssapp-carousel .rssapp-carousel-slides,
+      .rssapp-carousel-slides {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    .rssapp-carousel-nav {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -129,8 +288,13 @@
 </footer>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="networks.html">LAN Networks</a><a href="customers.html">Customers</a><a href="news.html" class="active">News</a><a href="contact.html">Contact</a></div>
-  <div class="mobile-lang-switcher"><a href="../ro/stiri.html">🇷🇴 Română</a><a href="../hu/hirek.html">🇭🇺 Magyar</a><a href="news.html" class="active">🇬🇧 English</a></div>
+  <div class="mobile-nav" ><a href="index.html"  class="mobile-nav-link">Home</a><a href="services.html" class="mobile-nav-link">Services</a><a href="networks.html" class="mobile-nav-link">LAN Networks</a><a href="customers.html" class="mobile-nav-link">Customers</a><a href="news.html" class="mobile-nav-link active">News</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
+ 
+  <div class="mobile-lang-switcher">
+    <a href="../ro/news.html" class="mobile-lang-option"><img src="../img/icon/romania.png" alt="Romanian flag" > Romanian</a>
+    <a href="../hu/news.html" class="mobile-lang-option"><img src="../img/icon/hungary.png" alt="Hungarian flag"> Hungarian</a>
+    <a href="../en/news.html" class="mobile-lang-option active"><img src="../img/icon/united-kingdom.png" alt="British flag"> English</a>
+  </div>
 </div>
 
 <script src="../js/main.js"></script>
