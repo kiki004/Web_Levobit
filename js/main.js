@@ -121,3 +121,207 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlideshow();
   // ----- konec dodatka -----
 });
+
+
+//cookes
+// Cookie Consent - Fully working version
+(function() {
+  const CONSENT_COOKIE = 'cookie_consent';
+  const ANALYTICS_CONSENT = 'ga_consent';
+  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Zamenjaj s svojo Google Analytics ID
+
+  // Helper funkcije
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Google Analytics
+  let gaLoaded = false;
+  function initGoogleAnalytics() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  }
+
+  function disableGoogleAnalytics() {
+    if (window.gtag) {
+      window['ga-disable-' + GA_MEASUREMENT_ID] = true;
+    }
+    gaLoaded = false;
+  }
+
+  // Glavna funkcija za nastavitev soglasja
+  function setConsent(allowAnalytics) {
+    setCookie(CONSENT_COOKIE, 'true', 365);
+    if (allowAnalytics) {
+      setCookie(ANALYTICS_CONSENT, 'true', 365);
+      initGoogleAnalytics();
+    } else {
+      setCookie(ANALYTICS_CONSENT, 'false', 365);
+      disableGoogleAnalytics();
+    }
+    const banner = document.getElementById('cookieBanner');
+    const floatingIcon = document.getElementById('cookieFloatingIcon');
+    if (banner) banner.style.display = 'none';
+    if (floatingIcon) floatingIcon.style.display = 'flex';
+  }
+
+  // Počakamo, da se DOM popolnoma naloži
+  document.addEventListener('DOMContentLoaded', function() {
+    // Preverimo obstoječe soglasje
+    const hasConsented = getCookie(CONSENT_COOKIE);
+    const banner = document.getElementById('cookieBanner');
+    const floatingIcon = document.getElementById('cookieFloatingIcon');
+
+    if (hasConsented) {
+      if (banner) banner.style.display = 'none';
+      if (floatingIcon) floatingIcon.style.display = 'flex';
+      const gaConsent = getCookie(ANALYTICS_CONSENT);
+      if (gaConsent === 'true') initGoogleAnalytics();
+      else disableGoogleAnalytics();
+    } else {
+      if (banner) banner.style.display = 'block';
+      if (floatingIcon) floatingIcon.style.display = 'none';
+    }
+
+    // Gumbi za sprejem/zavrnitev
+    const acceptBtn = document.getElementById('acceptCookiesBtn');
+    const declineBtn = document.getElementById('declineCookiesBtn');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function() { setConsent(true); });
+    }
+    if (declineBtn) {
+      declineBtn.addEventListener('click', function() { setConsent(false); });
+    }
+
+    // Modal in ostale funkcionalnosti
+    const modal = document.getElementById('cookieModal');
+    const modalBody = document.getElementById('cookieModalBody');
+    let loadedContent = {};
+
+    // Funkcija za nalaganje zavihkov
+    window.loadTab = function(tabId) {
+      if (tabId === 'settings') {
+        const currentGaConsent = getCookie(ANALYTICS_CONSENT);
+        const isAnalyticsEnabled = (currentGaConsent === 'true');
+        const statusText = isAnalyticsEnabled ? 'Enabled' : 'Disabled';
+        const settingsHtml = `
+          <div class="cookie-settings-panel">
+            <h3>Cookie Settings</h3>
+            <p>You can change your preference for analytics cookies (Google Analytics) at any time.</p>
+            <div class="current-status">Current status: <strong>${statusText}</strong></div>
+            <button id="settingsAcceptBtn" class="cookie-settings-btn accept">Accept Analytics</button>
+            <button id="settingsDeclineBtn" class="cookie-settings-btn decline">Decline Analytics</button>
+          </div>
+        `;
+        modalBody.innerHTML = settingsHtml;
+        const settingsAccept = document.getElementById('settingsAcceptBtn');
+        const settingsDecline = document.getElementById('settingsDeclineBtn');
+        if (settingsAccept) {
+          settingsAccept.addEventListener('click', function() {
+            setConsent(true);
+            if (document.querySelector('.cookie-tab-btn.active')?.getAttribute('data-tab') === 'settings') {
+              window.loadTab('settings');
+            }
+          });
+        }
+        if (settingsDecline) {
+          settingsDecline.addEventListener('click', function() {
+            setConsent(false);
+            if (document.querySelector('.cookie-tab-btn.active')?.getAttribute('data-tab') === 'settings') {
+              window.loadTab('settings');
+            }
+          });
+        }
+        return;
+      }
+
+      const fileMap = {
+        privacy: 'privacy-policy.html',
+        cookie: 'cookie-policy.html',
+        terms: 'terms-of-service.html'
+      };
+      if (loadedContent[tabId]) {
+        modalBody.innerHTML = loadedContent[tabId];
+        return;
+      }
+      modalBody.innerHTML = '<div class="cookie-tab-loader">Loading...</div>';
+      fetch(fileMap[tabId])
+        .then(response => {
+          if (!response.ok) throw new Error('Not found');
+          return response.text();
+        })
+        .then(html => {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          let content = tempDiv.querySelector('main') || tempDiv.querySelector('.legal-content') || tempDiv.querySelector('body');
+          const innerHtml = content ? content.innerHTML : html;
+          loadedContent[tabId] = innerHtml;
+          modalBody.innerHTML = innerHtml;
+        })
+        .catch(function() {
+          modalBody.innerHTML = '<div class="cookie-tab-loader">Failed to load content. Please try again later.</div>';
+        });
+    };
+
+    // Floating icon - odpri modal
+    if (floatingIcon) {
+      floatingIcon.addEventListener('click', function() {
+        if (modal) modal.style.display = 'flex';
+        const activeTabBtn = document.querySelector('.cookie-tab-btn.active');
+        if (activeTabBtn) window.loadTab(activeTabBtn.getAttribute('data-tab'));
+        else window.loadTab('privacy');
+      });
+    }
+
+    // Zapiranje modala
+    const closeModalBtn = document.querySelector('.cookie-modal-close');
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', function() {
+        if (modal) modal.style.display = 'none';
+      });
+    }
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) modal.style.display = 'none';
+    });
+
+    // Preklop zavihkov
+    const tabBtns = document.querySelectorAll('.cookie-tab-btn');
+    tabBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const tab = this.getAttribute('data-tab');
+        tabBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        window.loadTab(tab);
+      });
+    });
+
+    // Naloži začetni aktiven zavihek
+    const activeTab = document.querySelector('.cookie-tab-btn.active');
+    if (activeTab) window.loadTab(activeTab.getAttribute('data-tab'));
+  });
+})();

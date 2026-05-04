@@ -127,5 +127,44 @@
 </div>
 
 <script src="../js/main.js"></script>
+<!-- Cookie Consent Banner -->
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-banner-content">
+    <p>We use essential cookies for the contact form and Google Analytics (with your consent). You can change your preferences anytime via the cookie icon.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookiesBtn" class="cookie-btn">Accept</button>
+      <button id="declineCookiesBtn" class="cookie-btn-secondary">Decline</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Cookie Icon -->
+<!-- Floating Cookie Icon (zdaj pravi piškotek) -->
+<div id="cookieFloatingIcon" style="display: none;">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+    <circle cx="8" cy="12" r="1.5" fill="white"/>
+    <circle cx="12" cy="16" r="1.5" fill="white"/>
+    <circle cx="16" cy="10" r="1.5" fill="white"/>
+    <circle cx="14" cy="7" r="1" fill="white"/>
+    <circle cx="18" cy="14" r="1" fill="white"/>
+  </svg>
+</div>
+
+<!-- Modal with tabs (includes Cookie Settings tab for changing consent) -->
+<div id="cookieModal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <span class="cookie-modal-close">&times;</span>
+    <div class="cookie-modal-tabs">
+      <button class="cookie-tab-btn active" data-tab="privacy">Privacy Policy</button>
+      <button class="cookie-tab-btn" data-tab="cookie">Cookie Policy</button>
+      <button class="cookie-tab-btn" data-tab="terms">Terms of Service</button>
+      <button class="cookie-tab-btn" data-tab="settings">Settings</button>
+    </div>
+    <div class="cookie-modal-body" id="cookieModalBody">
+      <div class="cookie-tab-loader">Loading...</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
