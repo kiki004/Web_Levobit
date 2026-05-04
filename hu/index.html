@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
 </head>
 <body>
 
@@ -31,12 +38,18 @@
           </div>
           <div class="lang-dropdown" id="langDropdown">
             <a href="../en/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
-            <a href="../ro/index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
-            <a href="index.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="../index.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+            <a href="../hu/index.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
           </div>
         </li>
       </ul>
-      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+      <div class="header-actions">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
@@ -96,7 +109,7 @@
   <!-- Rólunk / Miért mi -->
   <section class="about-section section">
     <div class="container about-grid">
-      <div class="about-image-wrapper"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit csapat" style="width:100%; border-radius:var(--radius-lg); background:#f1f5f9; padding:2rem;"></div>
+      <div class="about-image-wrapper"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit csapat" style="width:100%; border-radius:var(--radius-lg); background:#ffffff; padding:2rem;"></div>
       <div><h2 class="about-content-title">Megbízható technológiai partnere</h2>
         <p class="about-content-text">A Levobit ötvözi a mély műszaki szakértelmet az ügyfélközpontú megközelítéssel. A felügyelettől és beléptetéstől kezdve a komplex hálózati infrastruktúráig robusztus, jövőbiztos IT-megoldásokat szállítunk.</p>
         <div class="about-checklist"><div class="about-check"><span class="about-check-icon">✓</span> 14+ év tapasztalat</div><div class="about-check"><span class="about-check-icon">✓</span> Tanúsított mérnökök</div><div class="about-check"><span class="about-check-icon">✓</span> Országos lefedettség</div><div class="about-check"><span class="about-check-icon">✓</span> 24/7 vészhelyzeti támogatás</div></div><a href="contact.html" class="btn btn-primary">Egyeztessen időpontot</a></div>
@@ -127,9 +140,21 @@
   </div>
 </footer>
 
+<!-- Mobile Menu  -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav"><a href="index.html" class="mobile-nav-link active">Kezdőlap</a><a href="services.html" class="mobile-nav-link">Szolgáltatások</a><a href="networks.html" class="mobile-nav-link">LAN hálózatok</a><a href="customers.html" class="mobile-nav-link">Ügyfeleink</a><a href="news.html" class="mobile-nav-link">Hírek</a><a href="contact.html" class="mobile-nav-link">Kapcsolat</a></div>
-  <div class="mobile-lang-switcher"><a href="../en/index.html" class="mobile-lang-option">🇬🇧 English</a><a href="../ro/index.html" class="mobile-lang-option">🇷🇴 Română</a><a href="index.html" class="mobile-lang-option active">🇭🇺 Magyar</a></div>
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link active">Kezdőlap</a>
+    <a href="services.html" class="mobile-nav-link">Szolgáltatások</a>
+    <a href="networks.html" class="mobile-nav-link">LAN hálózatok</a>
+    <a href="customers.html" class="mobile-nav-link">Ügyfeleink</a>
+    <a href="news.html" class="mobile-nav-link">Hírek</a>
+    <a href="contact.html" class="mobile-nav-link">Kapcsolat</a>
+  </div>
+  <div class="mobile-lang-switcher">
+    <a href="../en/index.html" class="mobile-lang-option">🇬🇧 English</a>
+    <a href="../index.html" class="mobile-lang-option">🇷🇴 Română</a>
+    <a href="index.html" class="mobile-lang-option active">🇭🇺 Magyar</a>
+  </div>
 </div>
 
 <script src="../js/main.js"></script>

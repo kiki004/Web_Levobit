@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ----- SLIDESHOW FUNCTION (dodano) -----
+  // ----- SLIDESHOW FUNCTION  -----
   function initSlideshow() {
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
-    if (!slides.length) return; // če ni elementov, ne naredi nič (services.html nima slideshowa)
+    if (!slides.length) return; 
     let currentIndex = 0;
     let interval;
 
