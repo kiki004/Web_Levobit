@@ -119,18 +119,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initSlideshow();
-  // ----- konec dodatka -----
+  
 });
 
 
 //cookes
-// Cookie Consent - Fully working version
+  // Cookie Consent 
 (function() {
   const CONSENT_COOKIE = 'cookie_consent';
   const ANALYTICS_CONSENT = 'ga_consent';
-  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Zamenjaj s svojo Google Analytics ID
+  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Înlocuiți cu ID-ul dvs. Google Analytics
 
-  // Helper funkcije
+  // Funcții ajutătoare
   function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -174,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gaLoaded = false;
   }
 
-
   function setConsent(allowAnalytics) {
     setCookie(CONSENT_COOKIE, 'true', 365);
     if (allowAnalytics) {
@@ -190,9 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (floatingIcon) floatingIcon.style.display = 'flex';
   }
 
-  
   document.addEventListener('DOMContentLoaded', function() {
-    // Preverimo obstoječe soglasje
+    // Verificăm consimțământul existent
     const hasConsented = getCookie(CONSENT_COOKIE);
     const banner = document.getElementById('cookieBanner');
     const floatingIcon = document.getElementById('cookieFloatingIcon');
@@ -208,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (floatingIcon) floatingIcon.style.display = 'none';
     }
 
-    
     const acceptBtn = document.getElementById('acceptCookiesBtn');
     const declineBtn = document.getElementById('declineCookiesBtn');
     if (acceptBtn) {
@@ -218,24 +215,22 @@ document.addEventListener('DOMContentLoaded', () => {
       declineBtn.addEventListener('click', function() { setConsent(false); });
     }
 
-    
     const modal = document.getElementById('cookieModal');
     const modalBody = document.getElementById('cookieModalBody');
     let loadedContent = {};
 
-    
     window.loadTab = function(tabId) {
       if (tabId === 'settings') {
         const currentGaConsent = getCookie(ANALYTICS_CONSENT);
         const isAnalyticsEnabled = (currentGaConsent === 'true');
-        const statusText = isAnalyticsEnabled ? 'Enabled' : 'Disabled';
+        const statusText = isAnalyticsEnabled ? 'Activate' : 'Dezactivate';
         const settingsHtml = `
           <div class="cookie-settings-panel">
-            <h3>Cookie Settings</h3>
-            <p>You can change your preference for analytics cookies (Google Analytics) at any time.</p>
-            <div class="current-status">Current status: <strong>${statusText}</strong></div>
-            <button id="settingsAcceptBtn" class="cookie-settings-btn accept">Accept Analytics</button>
-            <button id="settingsDeclineBtn" class="cookie-settings-btn decline">Decline Analytics</button>
+            <h3>Setări cookie</h3>
+            <p>Puteți modifica oricând preferința pentru cookie-urile de analiză (Google Analytics).</p>
+            <div class="current-status">Starea curentă: <strong>${statusText}</strong></div>
+            <button id="settingsAcceptBtn" class="cookie-settings-btn accept">Accept analiză</button>
+            <button id="settingsDeclineBtn" class="cookie-settings-btn decline">Refuz analiză</button>
           </div>
         `;
         modalBody.innerHTML = settingsHtml;
@@ -261,15 +256,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const fileMap = {
-        privacy: 'privacy-policy.html',
-        cookie: 'cookie-policy.html',
-        terms: 'terms-of-service.html'
+        privacy: '../ro/privacy-policy.html',
+        cookie: '../ro/cookie-policy.html',
+        terms: '../ro/terms-of-service.html'
       };
       if (loadedContent[tabId]) {
         modalBody.innerHTML = loadedContent[tabId];
         return;
       }
-      modalBody.innerHTML = '<div class="cookie-tab-loader">Loading...</div>';
+      modalBody.innerHTML = '<div class="cookie-tab-loader">Se încarcă...</div>';
       fetch(fileMap[tabId])
         .then(response => {
           if (!response.ok) throw new Error('Not found');
@@ -284,11 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
           modalBody.innerHTML = innerHtml;
         })
         .catch(function() {
-          modalBody.innerHTML = '<div class="cookie-tab-loader">Failed to load content. Please try again later.</div>';
+          modalBody.innerHTML = '<div class="cookie-tab-loader">Nu s-a putut încărca conținutul. Încercați din nou mai târziu.</div>';
         });
     };
 
-    // Floating icon - odpri modal
+    // Iconița plutitoare - deschide modal
     if (floatingIcon) {
       floatingIcon.addEventListener('click', function() {
         if (modal) modal.style.display = 'flex';
@@ -298,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Zapiranje modala
+    // Închiderea modalei
     const closeModalBtn = document.querySelector('.cookie-modal-close');
     if (closeModalBtn) {
       closeModalBtn.addEventListener('click', function() {
@@ -309,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.target === modal) modal.style.display = 'none';
     });
 
-    // Preklop zavihkov
+    // Comutare fileuri
     const tabBtns = document.querySelectorAll('.cookie-tab-btn');
     tabBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -320,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Naloži začetni aktiven zavihek
+    // Încărcare filă activă inițială
     const activeTab = document.querySelector('.cookie-tab-btn.active');
     if (activeTab) window.loadTab(activeTab.getAttribute('data-tab'));
   });

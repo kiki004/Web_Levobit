@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookie Policy | Levobit</title>
-  <meta name="description" content="Levobit cookie policy – what cookies we use and how you can control them.">
+  <title>Politica cookie | Levobit</title>
+  <meta name="description" content="Politica cookie Levobit – ce module cookie folosim și cum le puteți controla.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,8 +13,34 @@
 </head>
 <body>
 
-<!-- header (same as above; omitted for brevity – copy from privacy-policy.html) -->
-<header class="header">...</header>
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Acasă</a></li>
+        <li><a href="services.html">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/cookie-policy.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/cookie-policy.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="cookie-policy.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
 
 <main>
   <section class="hero" style="min-height: 40vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
@@ -24,39 +50,39 @@
       <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
     <div class="container hero-content" style="max-width: 800px;">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Legal Information</div>
-      <h1 class="hero-title">Cookie <span class="hero-title-gradient">Policy</span></h1>
-      <p class="hero-subtitle">Last updated: May 2026</p>
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Informații legale</div>
+      <h1 class="hero-title">Politica <span class="hero-title-gradient">cookie</span></h1>
+      <p class="hero-subtitle">Ultima actualizare: mai 2026</p>
     </div>
   </section>
 
   <div class="container legal-content">
-    <h2>1. What are cookies</h2>
-    <p>Cookies are small text files placed on your device when you visit a website. They help the website remember your actions and preferences.</p>
+    <h2>1. Ce sunt modulele cookie?</h2>
+    <p>Modulele cookie sunt fișiere text mici plasate pe dispozitivul dumneavoastră atunci când vizitați un site web. Acestea ajută site-ul să își amintească acțiunile și preferințele dumneavoastră.</p>
 
-    <h2>2. What cookies we use</h2>
-    <p>Levobit uses only strictly necessary cookies that are essential for the operation of our contact form. Without these cookies, the contact form cannot function properly. We do not use any analytics or advertising cookies unless you accept them via our cookie banner (the banner only enables essential cookies by default).</p>
+    <h2>2. Ce module cookie folosim?</h2>
+    <p>Levobit folosește doar module cookie strict necesare pentru funcționarea formularului nostru de contact. Fără aceste cookie-uri, formularul de contact nu poate funcționa corect. Nu folosim cookie-uri de analiză sau publicitate decât dacă le acceptați prin intermediul bannerului nostru cookie (bannerul activează implicit doar cookie-urile esențiale).</p>
 
-    <h2>3. List of cookies</h2>
+    <h2>3. Lista modulelor cookie</h2>
     <ul>
-      <li><strong>cookie_consent_accepted</strong> – stores your consent preference (expires after 1 year).</li>
-      <li><strong>PHPSESSID</strong> – used by our server to manage session data (contact form submission). Expires when you close your browser.</li>
+      <li><strong>cookie_consent_accepted</strong> – stochează preferința dumneavoastră de consimțământ (expiră după 1 an).</li>
+      <li><strong>PHPSESSID</strong> – folosit de serverul nostru pentru a gestiona datele sesiunii (trimiterea formularului de contact). Expiră la închiderea browserului.</li>
     </ul>
 
-    <h2>4. Third-party cookies</h2>
-    <p>We do not currently embed third-party services (e.g., YouTube, Google Maps) that set their own cookies. If we add such features in the future, this policy will be updated.</p>
+    <h2>4. Module cookie ale terților</h2>
+    <p>În prezent, nu integrăm servicii terțe (de exemplu, YouTube, Google Maps) care să seteze propriile cookie-uri. Dacă vom adăuga astfel de funcții în viitor, această politică va fi actualizată.</p>
 
-    <h2>5. How to control cookies</h2>
-    <p>You can disable cookies through your browser settings. However, disabling essential cookies may break the contact form functionality.</p>
+    <h2>5. Cum puteți controla modulele cookie</h2>
+    <p>Puteți dezactiva modulele cookie prin setările browserului. Cu toate acestea, dezactivarea cookie-urilor esențiale poate afecta funcționalitatea formularului de contact.</p>
 
-    <h2>6. Contact us</h2>
-    <p>If you have any questions about our cookie usage, contact us at <a href="mailto:office@levobit.ro">office@levobit.ro</a>.</p>
+    <h2>6. Contactați-ne</h2>
+    <p>Dacă aveți întrebări despre utilizarea modulelor cookie, contactați-ne la <a href="mailto:office@levobit.ro">office@levobit.ro</a>.</p>
   </div>
 </main>
 
 <footer class="footer">...</footer>
 <div class="mobile-menu">...</div>
-<script src="../js/main.js"></script>
+<script src="../js/main-ro.js"></script>
 <!-- include cookie banner snippet as above -->
 </body>
 </html>

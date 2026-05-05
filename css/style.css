@@ -445,11 +445,12 @@ button {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
   justify-content: center;
   gap: 32px;
   text-align: center;
-  margin: 40px auto 20px;
+  margin: 40px auto 40px;
+  
 }
 
 .hero-stat-number {
@@ -482,6 +483,7 @@ button {
   transition: var(--transition);
   border: 2px solid transparent;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -1015,8 +1017,12 @@ button {
     display: none;
   }
   .hero-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
+    gap: 15px;
+  }
+  
+  .hero-stat {
+    text-align: center;
   }
   .features-grid {
     grid-template-columns: 1fr;
@@ -1036,7 +1042,7 @@ button {
   .section {
     padding: 60px 0;
   }
-  /* Popravki za services layout na mobilnih napravah */
+
   .services-layout {
     flex-direction: column;
   }
@@ -1046,7 +1052,7 @@ button {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     padding: 8px;
-    flex: none;               /* prepreči raztezanje čez okvir */
+    flex: none;               
   }
   .service-menu-item {
     display: inline-block;
@@ -1064,6 +1070,9 @@ button {
     width: 100%;
     margin-right: 0;
   }
+  .hero-buttons{
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1072,10 +1081,15 @@ button {
   }
   .hero-stats {
     grid-template-columns: 1fr;
+    
   }
   .btn {
     padding: 10px 20px;
   }
+
+  .hero-badge {
+  margin-top: 40px;
+}
 }
 
 /* --------------------------------------------
@@ -1115,7 +1129,12 @@ button {
   background: var(--border);
   border-radius: 4px;
 }
-
+@media (max-width: 400px) {
+  
+  .mobile-nav-link{
+    padding: 10px 20px;
+  }
+}
 /* --------------------------------------------
    news page
    -------------------------------------------- */

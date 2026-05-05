@@ -1,66 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service | Levobit</title>
-  <meta name="description" content="Terms and conditions for using Levobit's website and services.">
+  <title>Termeni și condiții | Levobit</title>
+  <meta name="description" content="Termenii și condițiile pentru utilizarea site-ului și serviciilor Levobit.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <style> /* same as privacy policy */ </style>
+  <style>
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-content h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin: 32px 0 16px;
+      color: var(--primary);
+    }
+    .legal-content p, .legal-content li {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .legal-content ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+    .legal-content strong {
+      color: var(--text);
+    }
+    .legal-content a {
+      color: var(--accent);
+    }
+    @media (max-width: 768px) {
+      .legal-content {
+        padding: 40px 20px;
+      }
+      .legal-content h1 { font-size: 1.8rem; }
+      .legal-content h2 { font-size: 1.3rem; }
+    }
+  </style>
 </head>
 <body>
 
-<header class="header">...</header>
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="logo-img"></a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Acasă</a></li>
+        <li><a href="services.html">Servicii</a></li>
+        <li><a href="networks.html">Rețele LAN</a></li>
+        <li><a href="customers.html">Clienți</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-switcher">
+          <div class="lang-current" onclick="toggleLangDropdown()">
+            <span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span>
+            <span class="lang-code">RO</span>
+            <span class="lang-caret">▾</span>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="../en/terms-of-service.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/united-kingdom.png" alt=""></span> English</a>
+            <a href="../hu/terms-of-service.html" class="lang-option"><span class="lang-flag"><img src="../img/icon/hungary.png" alt=""></span> Magyar</a>
+            <a href="terms-of-service.html" class="lang-option active"><span class="lang-flag"><img src="../img/icon/romania.png" alt=""></span> Română</a>
+          </div>
+        </li>
+      </ul>
+      <div class="header-actions"><button class="hamburger" onclick="toggleMenu()" aria-label="Meniu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
+    </nav>
+  </div>
+</header>
 
 <main>
-  <section class="hero" style="min-height: 40vh;">
+  <section class="hero" style="min-height: 40vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
     <div class="hero-grid"></div>
-    <div class="hero-particles">...</div>
-    <div class="container hero-content">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Legal Information</div>
-      <h1 class="hero-title">Terms of <span class="hero-title-gradient">Service</span></h1>
-      <p class="hero-subtitle">Effective date: May 2026</p>
+    <div class="hero-particles">
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    </div>
+    <div class="container hero-content" style="max-width: 800px;">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Informații legale</div>
+      <h1 class="hero-title">Termeni și <span class="hero-title-gradient">condiții</span></h1>
+      <p class="hero-subtitle">Data intrării în vigoare: mai 2026</p>
     </div>
   </section>
 
   <div class="container legal-content">
-    <h2>1. Acceptance of terms</h2>
-    <p>By accessing or using the Levobit website, you agree to be bound by these Terms of Service.</p>
+    <h2>1. Acceptarea termenilor</h2>
+    <p>Prin accesarea sau utilizarea site-ului Levobit, sunteți de acord cu acești Termeni și condiții.</p>
 
-    <h2>2. Use of the website</h2>
-    <p>You may use our website for lawful purposes only. You agree not to:</p>
+    <h2>2. Utilizarea site-ului</h2>
+    <p>Puteți utiliza site-ul nostru numai în scopuri legale. Sunteți de acord să nu:</p>
     <ul>
-      <li>Use the contact form to send spam or abusive messages</li>
-      <li>Attempt to gain unauthorised access to our systems</li>
-      <li>Interfere with the proper functioning of the website</li>
+      <li>Folosiți formularul de contact pentru a trimite mesaje spam sau abuzive</li>
+      <li>Încercați să obțineți acces neautorizat la sistemele noastre</li>
+      <li>Interferați cu funcționarea corectă a site-ului</li>
     </ul>
 
-    <h2>3. Intellectual property</h2>
-    <p>All content on this website (text, graphics, logos, images) is the property of Levobit or its licensors and is protected by copyright laws.</p>
+    <h2>3. Proprietatea intelectuală</h2>
+    <p>Toate conținuturile acestui site (texte, grafice, logo-uri, imagini) sunt proprietatea Levobit sau a licențiatorilor săi și sunt protejate de legile dreptului de autor.</p>
 
-    <h2>4. Limitation of liability</h2>
-    <p>Levobit provides its services “as is”. We do not guarantee that the website will be error‑free or uninterrupted. To the fullest extent permitted by law, we disclaim all warranties, whether express or implied.</p>
+    <h2>4. Limitarea răspunderii</h2>
+    <p>Levobit își furnizează serviciile „ca atare”. Nu garantăm că site-ul va fi fără erori sau neîntrerupt. În cea mai mare măsură permisă de lege, declinăm toate garanțiile, fie ele exprese sau implicite.</p>
 
-    <h2>5. Indemnification</h2>
-    <p>You agree to indemnify and hold Levobit harmless from any claims arising out of your misuse of the website.</p>
+    <h2>5. Despăgubire</h2>
+    <p>Sunteți de acord să despăgubiți și să exonerați Levobit de orice pretenții care decurg din utilizarea abuzivă a site-ului de către dumneavoastră.</p>
 
-    <h2>6. Changes to these terms</h2>
-    <p>We may update these terms from time to time. The “Effective date” at the top will indicate when changes were made.</p>
+    <h2>6. Modificări ale acestor termeni</h2>
+    <p>Putem actualiza acești termeni din când în când. „Data intrării în vigoare” de mai sus va indica momentul în care au fost făcute modificări.</p>
 
-    <h2>7. Governing law</h2>
-    <p>These terms are governed by the laws of Romania. Any disputes shall be resolved in the courts of Brașov.</p>
+    <h2>7. Legea aplicabilă</h2>
+    <p>Acestor termeni li se aplică legile României. Orice litigiu va fi soluționat de instanțele din Brașov.</p>
 
-    <h2>8. Contact information</h2>
-    <p>For any questions regarding these terms, please contact us at <a href="mailto:office@levobit.ro">office@levobit.ro</a>.</p>
+    <h2>8. Informații de contact</h2>
+    <p>Pentru orice întrebări referitoare la acești termeni, vă rugăm să ne contactați la <a href="mailto:office@levobit.ro">office@levobit.ro</a>.</p>
   </div>
 </main>
 
-<footer class="footer">...</footer>
-<div class="mobile-menu">...</div>
-<script src="../js/main.js"></script>
-<!-- add cookie banner -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Soluții IT profesionale — supraveghere, control acces, rețelistică, suport și software personalizat.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
+      <div><h4 class="footer-heading">Servicii</h4><ul class="footer-links"><li><a href="services.html#cctv">Supraveghere</a></li><li><a href="services.html#access">Control acces</a></li><li><a href="networks.html">Rețele LAN</a></li><li><a href="services.html#helpdesk">Suport IT</a></li></ul></div>
+      <div><h4 class="footer-heading">Companie</h4><ul class="footer-links"><li><a href="customers.html">Clienți</a></li><li><a href="news.html">Noutăți</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4 class="footer-heading">Legal</h4><ul class="footer-links"><li><a href="privacy-policy.html">Politica de confidențialitate</a></li><li><a href="cookie-policy.html">Politica cookie</a></li><li><a href="terms-of-service.html">Termeni și condiții</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>©<script>document.write(new Date().getFullYear());</script> Levobit — Toate drepturile rezervate.</p></div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav"><a href="i../ndex.html">Acasă</a><a href="services.html">Servicii</a><a href="networks.html">Rețele LAN</a><a href="customers.html">Clienți</a><a href="news.html">Noutăți</a><a href="contact.html">Contact</a></div>
+  <div class="mobile-lang-switcher">
+    <a href="../en/terms-of-service.html" class="mobile-lang-option">🇬🇧 English</a>
+    <a href="../hu/terms-of-service.html" class="mobile-lang-option">🇭🇺 Magyar</a>
+    <a href="terms-of-service.html" class="mobile-lang-option active">🇷🇴 Română</a>
+  </div>
+</div>
+
+<script src="../js/main-ro.js"></script>
+<!-- Cookie Consent Banner (add this snippet) -->
+<div id="cookieConsent" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); color: white; padding: 16px 24px; text-align: center; z-index: 9999; border-top: 1px solid rgba(255,255,255,0.1);">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <div style="flex: 1; text-align: left; font-size: 0.9rem;">Acest site folosește cookie-uri pentru a vă îmbunătăți experiența. Continuând să utilizați acest site, vă dați consimțământul pentru utilizarea cookie-urilor. Aflați mai multe în <a href="privacy-policy.html" style="color: var(--accent); text-decoration: underline;">Politica de confidențialitate</a>.</div>
+    <div><button id="acceptCookies" style="background: var(--accent); color: white; border: none; padding: 8px 24px; border-radius: var(--radius); cursor: pointer; font-weight: 600;">Accept</button></div>
+  </div>
+</div>
+<script>
+  (function() {
+    const cookieName = 'cookie_consent_accepted';
+    const banner = document.getElementById('cookieConsent');
+    if (document.cookie.split(';').some((c) => c.trim().startsWith(cookieName + '='))) {
+      if (banner) banner.style.display = 'none';
+    }
+    const acceptBtn = document.getElementById('acceptCookies');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function() {
+        document.cookie = cookieName + '=true; path=/; max-age=' + 60*60*24*365;
+        if (banner) banner.style.display = 'none';
+      });
+    }
+  })();
+</script>
 </body>
 </html>

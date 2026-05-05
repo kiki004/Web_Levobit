@@ -27,7 +27,7 @@
   <meta property="og:image:alt" content="Levobit Logo">
   <meta property="article:publisher" content="https://www.facebook.com/levobit/">
   
-  <!-- Alternate language versions (hreflang) – az eredeti fájlneveket használjuk -->
+  <!-- Alternate language versions (hreflang) -->
   <link rel="alternate" href="https://www.levobit.ro/news.html" hreflang="ro">
   <link rel="alternate" href="https://www.levobit.ro/en/news.html" hreflang="en">
   <link rel="alternate" href="https://www.levobit.ro/hu/news.html" hreflang="hu">
@@ -118,6 +118,128 @@
     ]
   }
   </script>
+  
+  <style>
+    .hero-particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(59, 130, 246, 0.5);
+      border-radius: 50%;
+      animation: float 10s infinite;
+    }
+    .hero-particle:nth-child(1) { top: 10%; left: 5%; }
+    .hero-particle:nth-child(2) { top: 70%; left: 15%; }
+    .hero-particle:nth-child(3) { top: 30%; left: 85%; }
+    .hero-particle:nth-child(4) { top: 80%; left: 75%; }
+    .hero-particle:nth-child(5) { top: 45%; left: 45%; }
+    .hero-particle:nth-child(6) { top: 15%; left: 65%; }
+    .hero-particle:nth-child(7) { top: 60%; left: 35%; }
+    .hero-particle:nth-child(8) { top: 85%; left: 55%; }
+    .hero-particle:nth-child(9) { top: 25%; left: 25%; }
+    .hero-particle:nth-child(10) { top: 50%; left: 95%; }
+    .hero-particle:nth-child(11) { top: 90%; left: 10%; }
+    .hero-particle:nth-child(12) { top: 5%; left: 50%; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+      25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+      50% { transform: translateY(-10px) translateX(-10px); opacity: 0.7; }
+      75% { transform: translateY(-30px) translateX(5px); opacity: 0.9; }
+    }
+    
+    .news-feed-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .rss-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .rss-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .rss-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+    .rss-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      background: #f0f0f0;
+    }
+    .rss-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .rss-card h3 a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .rss-card h3 a:hover {
+      text-decoration: underline;
+    }
+    .rss-date {
+      font-size: 0.8rem;
+      color: var(--text-lighter);
+      margin-bottom: 12px;
+    }
+    .rss-description {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .rss-read-more {
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rss-read-more:hover {
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      .rss-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .rss-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .rss-card img {
+        height: 160px;
+      }
+    }
+    .rss-fallback {
+      text-align: center;
+      padding: 40px;
+      background: var(--accent-light);
+      border-radius: var(--radius);
+      color: var(--text-light);
+    }
+  </style>
 </head>
 <body>
 
@@ -154,12 +276,10 @@
   <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
     <div class="hero-grid"></div>
     <div class="hero-particles">
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
     <div class="container hero-content" style="max-width: 800px;">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Maradjon naprakész</div>
@@ -175,9 +295,10 @@
         <h2 class="section-title">Facebook frissítések</h2>
         <p class="section-subtitle">Minden bejelentés, esemény és hír egy helyen.</p>
       </div>
-      <div class="news-feed-wrapper">
-        <rssapp-carousel id="tONrNQHo1thjm7ye"></rssapp-carousel>
-        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+      <div class="news-feed-wrapper" id="newsFeedWrapper">
+        <div id="rssFeedContainer" style="min-height: 200px;">
+          <div style="text-align: center; padding: 40px;">Betöltés...</div>
+        </div>
       </div>
     </div>
   </section>
@@ -201,36 +322,99 @@
       <div><h4 class="footer-heading">Cég</h4><ul class="footer-links"><li><a href="customers.html">Ügyfeleink</a></li><li><a href="news.html">Hírek</a></li><li><a href="contact.html">Kapcsolat</a></li></ul></div>
       <div><h4 class="footer-heading">Kapcsolat</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-        <p>©<script>document.write(new Date().getFullYear());</script> Levobit — Minden jog fenntartva.</p>
-    </div>
+    <div class="footer-bottom"><p>©<script>document.write(new Date().getFullYear());</script> Levobit — Minden jog fenntartva.</p></div>
   </div>
 </footer>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-nav"><a href="index.html" class="mobile-nav-link">Kezdőlap</a><a href="services.html" class="mobile-nav-link">Szolgáltatások</a><a href="networks.html" class="mobile-nav-link">LAN hálózatok</a><a href="customers.html" class="mobile-nav-link">Ügyfeleink</a><a href="news.html" class="mobile-nav-link active">Hírek</a><a href="contact.html" class="mobile-nav-link">Kapcsolat</a></div>
-  
   <div class="mobile-lang-switcher">
-    <a href="../ro/news.html" class="mobile-lang-option"><img src="../img/icon/romania.png" alt="Romanian flag" > Română</a>
+    <a href="../ro/news.html" class="mobile-lang-option"><img src="../img/icon/romania.png" alt="Romanian flag"> Română</a>
     <a href="../hu/news.html" class="mobile-lang-option active"><img src="../img/icon/hungary.png" alt="Hungarian flag"> Magyar</a>
-    <a href="../en/news.html" class="mobile-lang-option "><img src="../img/icon/united-kingdom.png" alt="British flag"> English</a>
+    <a href="../en/news.html" class="mobile-lang-option"><img src="../img/icon/united-kingdom.png" alt="British flag"> English</a>
   </div>
 </div>
 
 <script src="../js/main.js"></script>
-<!-- Cookie Consent Banner -->
+
+<!-- RSS Feed Loader -->
+<script>
+  (function() {
+    const RSS_FEED_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://fetchrss.com/feed/1wKAfs9Ex76Z1wKAYg5liGkV.rss');
+    const container = document.getElementById('rssFeedContainer');
+
+    function extractImageFromDescription(description) {
+      if (!description) return null;
+      const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
+      return imgMatch ? imgMatch[1] : null;
+    }
+
+    function cleanDescription(description, maxLength = 150) {
+      if (!description) return '';
+      let text = description.replace(/<[^>]*>/g, '');
+      text = text.replace(/\(Feed generated with.*?\)/gi, '');
+      text = text.trim();
+      if (text.length > maxLength) {
+        text = text.substring(0, maxLength) + '…';
+      }
+      return text;
+    }
+
+    async function loadRSS() {
+      try {
+        const response = await fetch(RSS_FEED_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parserError = xmlDoc.querySelector('parsererror');
+        if (parserError) throw new Error('Invalid XML');
+        const items = xmlDoc.querySelectorAll('item');
+        if (!items.length) throw new Error('No items found');
+        let html = '<div class="rss-grid">';
+        items.forEach(item => {
+          const title = item.querySelector('title')?.textContent || 'Untitled';
+          const link = item.querySelector('link')?.textContent || '#';
+          const pubDateRaw = item.querySelector('pubDate')?.textContent;
+          const date = pubDateRaw ? new Date(pubDateRaw).toLocaleDateString('hu-HU', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+          const descriptionRaw = item.querySelector('description')?.textContent || '';
+          const imageUrl = extractImageFromDescription(descriptionRaw);
+          const descriptionText = cleanDescription(descriptionRaw);
+          html += `
+            <div class="rss-card">
+              ${imageUrl ? `<img src="${imageUrl}" alt="${title.replace(/"/g, '&quot;')}" loading="lazy">` : ''}
+              <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
+              ${date ? `<div class="rss-date">${date}</div>` : ''}
+              <div class="rss-description">${descriptionText}</div>
+              <a href="${link}" target="_blank" rel="noopener" class="rss-read-more">Tovább →</a>
+            </div>
+          `;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+      } catch (error) {
+        console.error('RSS loading error:', error);
+        container.innerHTML = `
+          <div class="rss-fallback">
+            <p>⚠️ A hírfolyam jelenleg nem tölthető be. Kérjük, látogassa meg közvetlenül a <a href="https://www.facebook.com/levobit" target="_blank" rel="noopener">Facebook oldalunkat</a>.</p>
+          </div>
+        `;
+      }
+    }
+    loadRSS();
+  })();
+</script>
+
+<!-- Cookie Consent Banner and other elements remain unchanged -->
 <div id="cookieBanner" class="cookie-banner">
   <div class="cookie-banner-content">
-    <p>We use essential cookies for the contact form and Google Analytics (with your consent). You can change your preferences anytime via the cookie icon.</p>
+    <p>Alapvető sütiket használunk a kapcsolatfelvételi űrlaphoz és a Google Analyticshez (az Ön hozzájárulásával). Beállításait bármikor módosíthatja a süti ikonra kattintva.</p>
     <div class="cookie-buttons">
-      <button id="acceptCookiesBtn" class="cookie-btn">Accept</button>
-      <button id="declineCookiesBtn" class="cookie-btn-secondary">Decline</button>
+      <button id="acceptCookiesBtn" class="cookie-btn">Elfogadom</button>
+      <button id="declineCookiesBtn" class="cookie-btn-secondary">Elutasítom</button>
     </div>
   </div>
 </div>
-
-<!-- Floating Cookie Icon -->
-<!-- Floating Cookie Icon (zdaj pravi piškotek) -->
 <div id="cookieFloatingIcon" style="display: none;">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
@@ -241,21 +425,25 @@
     <circle cx="18" cy="14" r="1" fill="white"/>
   </svg>
 </div>
-
-<!-- Modal with tabs (includes Cookie Settings tab for changing consent) -->
 <div id="cookieModal" class="cookie-modal">
   <div class="cookie-modal-content">
     <span class="cookie-modal-close">&times;</span>
     <div class="cookie-modal-tabs">
-      <button class="cookie-tab-btn active" data-tab="privacy">Privacy Policy</button>
-      <button class="cookie-tab-btn" data-tab="cookie">Cookie Policy</button>
-      <button class="cookie-tab-btn" data-tab="terms">Terms of Service</button>
-      <button class="cookie-tab-btn" data-tab="settings">Settings</button>
+      <button class="cookie-tab-btn active" data-tab="privacy">Adatvédelmi tájékoztató</button>
+      <button class="cookie-tab-btn" data-tab="cookie">Sütik szabályzata</button>
+      <button class="cookie-tab-btn" data-tab="terms">Felhasználási feltételek</button>
+      <button class="cookie-tab-btn" data-tab="settings">Beállítások</button>
     </div>
     <div class="cookie-modal-body" id="cookieModalBody">
-      <div class="cookie-tab-loader">Loading...</div>
+      <div class="cookie-tab-loader">Betöltés...</div>
     </div>
   </div>
 </div>
+
+<script>
+  (function keepAlive() {
+    fetch('https://fetchrss.com/feed/1wKAfs9Ex76Z1wKAYg5liGkV.rss', { method: 'HEAD', cache: 'no-store' }).catch(() => {});
+  })();
+</script>
 </body>
 </html>

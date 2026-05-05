@@ -120,6 +120,7 @@
   </script>
   
   <style>
+    /* Hero particles (unchanged) */
     .hero-particle {
       position: absolute;
       width: 4px;
@@ -128,8 +129,6 @@
       border-radius: 50%;
       animation: float 10s infinite;
     }
-    /* Tvoja originalna koda za "random" ni veljavna v CSS – sem jo zakomentiral, pustil originalne pozicije iz drugih strani.
-       Če želiš naključne pozicije, uporabi JavaScript, vendar pusti tako kot je – delci se bodo prikazali na privzetih mestih. */
     .hero-particle:nth-child(1) { top: 10%; left: 5%; }
     .hero-particle:nth-child(2) { top: 70%; left: 15%; }
     .hero-particle:nth-child(3) { top: 30%; left: 85%; }
@@ -150,6 +149,7 @@
       75% { transform: translateY(-30px) translateX(5px); opacity: 0.9; }
     }
     
+    /* RSS feed grid styles */
     .news-feed-wrapper {
       max-width: 1200px;
       margin: 0 auto;
@@ -157,38 +157,90 @@
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow);
       padding: 20px;
-      overflow: hidden;
     }
-    rssapp-carousel {
-      display: block;
+    .rss-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .rss-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .rss-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+    .rss-card img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      background: #f0f0f0;
     }
-    .rssapp-carousel .rssapp-carousel-slides,
-    .rssapp-carousel-slides {
-      display: grid !important;
-      grid-template-columns: repeat(1, 1fr) !important;
-      gap: 20px;
-      transition: none !important;
+    .rss-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
     }
-    .rssapp-carousel .rssapp-carousel-slide,
-    .rssapp-carousel-slide {
-      width: 100% !important;
-      margin: 0 !important;
+    .rss-card h3 a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .rss-card h3 a:hover {
+      text-decoration: underline;
+    }
+    .rss-date {
+      font-size: 0.8rem;
+      color: var(--text-lighter);
+      margin-bottom: 12px;
+    }
+    .rss-description {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .rss-read-more {
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rss-read-more:hover {
+      gap: 12px;
     }
     @media (min-width: 768px) {
-      .rssapp-carousel .rssapp-carousel-slides,
-      .rssapp-carousel-slides {
-        grid-template-columns: repeat(2, 1fr) !important;
+      .rss-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     @media (min-width: 1024px) {
-      .rssapp-carousel .rssapp-carousel-slides,
-      .rssapp-carousel-slides {
-        grid-template-columns: repeat(3, 1fr) !important;
+      .rss-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
-    .rssapp-carousel-nav {
-      display: none;
+    @media (max-width: 768px) {
+      .rss-card img {
+        height: 160px;
+      }
+    }
+    /* Fallback message */
+    .rss-fallback {
+      text-align: center;
+      padding: 40px;
+      background: var(--accent-light);
+      border-radius: var(--radius);
+      color: var(--text-light);
     }
   </style>
 </head>
@@ -228,18 +280,10 @@
   <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--primary) 0%, #0C4A6E 100%);">
     <div class="hero-grid"></div>
     <div class="hero-particles">
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
-      <div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+      <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
     </div>
     <div class="container hero-content" style="max-width: 800px;">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Stay informed</div>
@@ -255,9 +299,11 @@
         <h2 class="section-title">Facebook Updates</h2>
         <p class="section-subtitle">All our announcements, events, and news in one place.</p>
       </div>
-      <div class="news-feed-wrapper">
-        <rssapp-carousel id="tONrNQHo1thjm7ye"></rssapp-carousel>
-        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+      <div class="news-feed-wrapper" id="newsFeedWrapper">
+        <!-- RSS feed will be loaded here by JavaScript -->
+        <div id="rssFeedContainer" style="min-height: 200px;">
+          <div style="text-align: center; padding: 40px;">Loading news...</div>
+        </div>
       </div>
     </div>
   </section>
@@ -277,7 +323,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><img src="../img/LOGO_LevoBit_Landscape-300x93.png" alt="Levobit" class="footer-logo"><p class="footer-brand-desc">Professional IT solutions — surveillance, access control, networking, support, and e-commerce development.</p><div class="footer-social"><a href="https://www.facebook.com/levobit/" target="_blank" class="footer-social-link"><img src="../img/icon/facebook.png" alt=""></a></div></div>
-      <div><h4 class="footer-heading">Services</h4><ul class="footer-links"><li><a href="services.html#surveillance">Surveillance</a></li><li><a href="services.html#access">Access Control</a></li><li><a href="networks.html">LAN Networks</a></li><li><a href="services.html#helpdesk">IT Support</a></li></ul></div>
+      <div><h4 class="footer-heading">Services</h4><ul class="footer-links"><li><a href="services.html#cctv">Surveillance</a></li><li><a href="services.html#access">Access Control</a></li><li><a href="networks.html">LAN Networks</a></li><li><a href="services.html#helpdesk">IT Support</a></li></ul></div>
       <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="customers.html">Customers</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+40724381071">📞 (+40) 724 381 071</a></li><li><a href="tel:+40743759848">📞 (+40) 743 759 848</a></li><li><a href="mailto:office@levobit.ro">✉️ office@levobit.ro</a></li></ul></div>
     </div>
@@ -288,17 +334,99 @@
 </footer>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav" ><a href="index.html"  class="mobile-nav-link">Home</a><a href="services.html" class="mobile-nav-link">Services</a><a href="networks.html" class="mobile-nav-link">LAN Networks</a><a href="customers.html" class="mobile-nav-link">Customers</a><a href="news.html" class="mobile-nav-link active">News</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
- 
+  <div class="mobile-nav"><a href="index.html" class="mobile-nav-link">Home</a><a href="services.html" class="mobile-nav-link">Services</a><a href="networks.html" class="mobile-nav-link">LAN Networks</a><a href="customers.html" class="mobile-nav-link">Customers</a><a href="news.html" class="mobile-nav-link active">News</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
   <div class="mobile-lang-switcher">
-    <a href="../ro/news.html" class="mobile-lang-option"><img src="../img/icon/romania.png" alt="Romanian flag" > Romanian</a>
-    <a href="../hu/news.html" class="mobile-lang-option"><img src="../img/icon/hungary.png" alt="Hungarian flag"> Hungarian</a>
-    <a href="../en/news.html" class="mobile-lang-option active"><img src="../img/icon/united-kingdom.png" alt="British flag"> English</a>
+    <a href="../ro/news.html" class="mobile-lang-option"><img src="../img/icon/romania.png" alt="Romanian flag"> Română</a>
+    <a href="../hu/news.html" class="mobile-lang-option"><img src="../img/icon/hungary.png" alt="Hungarian flag"> Magyar</a>
+    <a href="news.html" class="mobile-lang-option active"><img src="../img/icon/united-kingdom.png" alt="British flag"> English</a>
   </div>
 </div>
 
 <script src="../js/main.js"></script>
-<!-- Cookie Consent Banner -->
+
+<!-- RSS Feed Loader -->
+<script>
+  (function() {
+    // Your FetchRSS feed URL (obtained from OPML)
+    const RSS_FEED_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://fetchrss.com/feed/1wKAfs9Ex76Z1wKAYg5liGkV.rss');
+    const container = document.getElementById('rssFeedContainer');
+
+    // Helper: extract image from CDATA / description
+    function extractImageFromDescription(description) {
+      if (!description) return null;
+      // Look for <img src="...">
+      const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
+      return imgMatch ? imgMatch[1] : null;
+    }
+
+    // Helper: clean description text (remove HTML, truncate)
+    function cleanDescription(description, maxLength = 150) {
+      if (!description) return '';
+      // Remove HTML tags
+      let text = description.replace(/<[^>]*>/g, '');
+      // Remove "Feed generated with FetchRSS" and similar
+      text = text.replace(/\(Feed generated with.*?\)/gi, '');
+      text = text.trim();
+      if (text.length > maxLength) {
+        text = text.substring(0, maxLength) + '…';
+      }
+      return text;
+    }
+
+    // Fetch and display RSS
+    async function loadRSS() {
+      try {
+        const response = await fetch(RSS_FEED_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        
+        // Check for parsing errors
+        const parserError = xmlDoc.querySelector('parsererror');
+        if (parserError) throw new Error('Invalid XML');
+
+        const items = xmlDoc.querySelectorAll('item');
+        if (!items.length) throw new Error('No items found');
+
+        let html = '<div class="rss-grid">';
+        items.forEach(item => {
+          const title = item.querySelector('title')?.textContent || 'Untitled';
+          const link = item.querySelector('link')?.textContent || '#';
+          const pubDateRaw = item.querySelector('pubDate')?.textContent;
+          const date = pubDateRaw ? new Date(pubDateRaw).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+          const descriptionRaw = item.querySelector('description')?.textContent || '';
+          const imageUrl = extractImageFromDescription(descriptionRaw);
+          const descriptionText = cleanDescription(descriptionRaw);
+          
+          html += `
+            <div class="rss-card">
+              ${imageUrl ? `<img src="${imageUrl}" alt="${title.replace(/"/g, '&quot;')}" loading="lazy">` : ''}
+              <h3><a href="${link}" target="_blank" rel="noopener">${title}</a></h3>
+              ${date ? `<div class="rss-date">${date}</div>` : ''}
+              <div class="rss-description">${descriptionText}</div>
+              <a href="${link}" target="_blank" rel="noopener" class="rss-read-more">Read more →</a>
+            </div>
+          `;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+      } catch (error) {
+        console.error('RSS loading error:', error);
+        container.innerHTML = `
+          <div class="rss-fallback">
+            <p>⚠️ Unable to load news feed at the moment. Please visit our <a href="https://www.facebook.com/levobit" target="_blank" rel="noopener">Facebook page</a> directly.</p>
+          </div>
+        `;
+      }
+    }
+
+    // Start loading
+    loadRSS();
+  })();
+</script>
+
+<!-- Cookie Consent Banner (unchanged) -->
 <div id="cookieBanner" class="cookie-banner">
   <div class="cookie-banner-content">
     <p>We use essential cookies for the contact form and Google Analytics (with your consent). You can change your preferences anytime via the cookie icon.</p>
@@ -310,7 +438,6 @@
 </div>
 
 <!-- Floating Cookie Icon -->
-<!-- Floating Cookie Icon (zdaj pravi piškotek) -->
 <div id="cookieFloatingIcon" style="display: none;">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
@@ -322,7 +449,7 @@
   </svg>
 </div>
 
-<!-- Modal with tabs (includes Cookie Settings tab for changing consent) -->
+<!-- Modal with tabs -->
 <div id="cookieModal" class="cookie-modal">
   <div class="cookie-modal-content">
     <span class="cookie-modal-close">&times;</span>
@@ -337,5 +464,17 @@
     </div>
   </div>
 </div>
+
+<!-- Simple script to keep the feed alive (optional – just ping the RSS URL once per page load) -->
+<script>
+  // This additional fetch ensures that whenever a user visits the news page,
+  // the RSS feed is accessed, which helps keep it alive (prevents auto-deletion by FetchRSS).
+  (function keepAlive() {
+    const feedUrl = 'https://fetchrss.com/feed/1wKAfs9Ex76Z1wKAYg5liGkV.rss';
+    // Silent ping – doesn't affect user experience
+    fetch(feedUrl, { method: 'HEAD', cache: 'no-store' }).catch(() => {});
+  })();
+</script>
+
 </body>
 </html>
