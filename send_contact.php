@@ -46,7 +46,7 @@ $email_body = "Message from Levobit website.\n\n"
             . "Phone: $phone\n\n"
             . "Message:\n$message\n";
 $headers = "From: $email\r\n";
-$headers .= "Reply-To: $email\r\n";
+$headers .= "Reply-To: $email\r\n"; 
 
 if (mail($to, $email_subject, $email_body, $headers)) {
     echo json_encode(['success' => true, 'message' => 'Message sent! We will get back to you as soon as possible.']);

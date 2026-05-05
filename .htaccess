@@ -1,0 +1,24 @@
+# Enable URL rewriting engine
+RewriteEngine On
+
+# --- CONDITION 1: Request does not point to an existing file or directory ---
+# If the requested path is not a file and not a directory...
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# --- RULE 1: Remove .html extension from URL requests ---
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# --- CONDITION 2: Request contains .html extension (for redirects) ---
+RewriteCond %{THE_REQUEST} \.html[\ ?]
+
+# --- RULE 2: 301 redirect URLs with extension to those without ---
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# --- RULE 3: Redirect /index.html or /en/index.html to the root ---
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L,NC]
+
+# --- RULE 4: Redirect root /index to / (prevents duplicate content) ---
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\ HTTP/
+RewriteRule ^(.*)index$ /$1 [R=301,L]
